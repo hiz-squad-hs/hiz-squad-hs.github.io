@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Твое Имя</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Настройка: 1 — техработы включены, 0 — сайт работает нормально -->
+    <script> const ТЕХ_РАБОТЫ = 1; </script>
+
+
+    <!-- ТЕКСТ ДЛЯ ТЕХРАБОТ (показывается, если сверху стоит 1) -->
+    <div id="maintenance-text" style="display: none; text-align: center; margin-top: 20vh; font-family: sans-serif; color: #38bdf8;">
+        <h1 style="font-size: 3rem;">🛠️ Сайт на тех. работах</h1>
+        <p style="color: #94a3b8; font-size: 1.2rem; margin-top: 10px;">Вайбкодю новые фичи. Скоро вернусь!</p>
+    </div>
+
+
+    <!-- КОНТЕНТ САЙТА (автоматически скроется, если включены техработы) -->
+    <div id="site-content">
+        <div id="block-header"></div>
+        <div id="block-hero"></div>
+        <div id="block-projects"></div>
+        <div id="block-contacts"></div>
+    </div>
+
+
+    <!-- СКРИПТ СБОРКИ И ПЕРЕКЛЮЧЕНИЯ -->
+    <script>
+        if (ТЕХ_РАБОТЫ === 0) {
+            // Если включено, показываем текст техработ и прячем сам сайт
+            document.getElementById("maintenance-text").style.display = "block";
+            document.getElementById("site-content").style.display = "none";
+            document.body.style.backgroundColor = "#0b0f19"; 
+        } else {
+            // Если выключено (0), то просто загружаем наши блоки как обычно
+            function loadBlock(elementId, filePath) {
+                fetch(filePath)
+                    .then(res => res.text())
+                    .then(html => document.getElementById(elementId).innerHTML = html)
+                    .catch(err => console.error(err));
+            }
+            loadBlock("block-header", "blocks/header.html");
+            loadBlock("block-hero", "blocks/hero.html");
+            loadBlock("block-projects", "blocks/projects.html");
+            loadBlock("block-contacts", "blocks/contacts.html");
+        }
+    </script>
+
+</body>
+</html>

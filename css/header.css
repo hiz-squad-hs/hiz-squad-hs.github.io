@@ -1,0 +1,29 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 100;
+}
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #7c3aed;
+}
+.nav-link {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #7c3aed;
+}

@@ -1,0 +1,13 @@
+# Тяжелые зависимости Vite и Node.js (их никогда не пушат)
+node_modules/
+dist/
+
+# Локальные конфиги и логи ошибок npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# Системные файлы Windows и Mac
+.DS_Store
+Thumbs.db
