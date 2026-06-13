@@ -2,11 +2,10 @@ import { defineConfig } from 'vite';
 import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig({
-  base: '/hizsite/', // Твой путь на Гитхабе
-  plugins: [injectHTML()],
+  base: '/hizsite/', 
+  plugins: [injectHTML()], // Исправили имя плагина
   build: {
-    outDir: '.', // Собираем сайт прямо в корень, а не в папку dist!
-    emptyOutDir: false // Чтобы Vite случайно не стёр твои исходники при сборке
+    outDir: 'docs', // Собираем в безопасную папку docs
   },
   server: {
     allowedHosts: true
