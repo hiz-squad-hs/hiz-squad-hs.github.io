@@ -199,12 +199,13 @@
     </footer>
 
     <script>
-       // true — включить техработы, false — выключить
-const isMaintenance = true;
+    // Vite автоматически подставит сюда true или false при сборке
+const isMaintenanceMode = import.meta.env.VITE_MAINTENANCE === 'true';
 
-if (isMaintenance && !location.pathname.includes('maintenance')) {
-    location.href = 'maintenance.html';
+if (isMaintenanceMode && !window.location.hostname.includes('localhost')) {
+    window.location.href = 'maintenance.html';
 }
+
 
     
         // Ищем все кнопки открытия модалок
