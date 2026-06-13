@@ -64,7 +64,7 @@ html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 32px;          
     font-weight: 800;         
-    color: #2f80ed;           
+    color: #7c3aed;           
     text-transform: uppercase;
     letter-spacing: 6px;
     opacity: 0.95;
@@ -130,14 +130,14 @@ html, body {
 @keyframes cyberFloat {
     0% {
         transform: translateY(0px) scale(1);
-        filter: drop-shadow(0 0 5px rgba(47, 128, 237, 0.4));
+        filter: drop-shadow(0 0 5px #a855f7);
     }
     50% {
         transform: translateY(-6px) scale(1.03); /* Мягко взлетает вверх и чуть увеличивается */
-        filter: drop-shadow(0 0 20px rgba(47, 128, 237, 0.8)); /* Разгорается неоновое свечение */
+        filter: drop-shadow(0 0 20px #7c3aed); /* Разгорается неоновое свечение */
     }
     100% {
         transform: translateY(0px) scale(1);
-        filter: drop-shadow(0 0 5px rgba(47, 128, 237, 0.4));
+        filter: drop-shadow(0 0 5px #a855f7)
     }
 }

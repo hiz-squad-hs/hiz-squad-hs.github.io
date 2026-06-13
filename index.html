@@ -17,11 +17,13 @@
     <load src="blocks/footer.html" />
 
     <script>
-        /*true технические работы включены false технические работы выключены*/
-        const isMaintenanceMode = true; 
-        if (isMaintenanceMode && !window.location.hostname.includes('localhost')) {
-            window.location.href = 'maintenance.html';
-        }
+       // true — включить техработы, false — выключить
+const isMaintenance = true;
+
+if (isMaintenance && !location.pathname.includes('maintenance')) {
+    location.href = 'maintenance.html';
+}
+
     
         // Ищем все кнопки открытия модалок
         const openButtons = document.querySelectorAll('.open-modal-btn');
