@@ -1,4 +1,4 @@
-<!-- Жесткие стили панели прямо в блоке -->
+<!-- Неубиваемые стили панели прямо внутри блока -->
 <style>
 .site-header, .site-header *, .site-header *::before, .site-header *::after {
     box-sizing: border-box !important;
@@ -68,16 +68,3 @@
     .btn-connect { display: none !important; }
 }
 </style>
-
-<!-- Разметка панели -->
-<header class="site-header">
-    <a href="./index.html" class="header-logo">hizsquad</a>
-    <nav class="header-nav">
-        <ul class="nav-list">
-            <li><a href="./index.html" class="nav-link">Главная</a></li>
-            <li><a href="./page2.html" class="nav-link">Услуги</a></li>
-            <li><a href="./portfolio.html" class="nav-link">Портфолио</a></li>
-        </ul>
-    </nav>
-    <a href="#contacts" class="btn-connect">Связаться</a>
-</header>
