@@ -56,3 +56,35 @@
     font-size: 0.8rem;
     color: #cbd5e1;
 }
+/* Стили для контейнера кнопки */
+.projects-action {
+    text-align: center;
+    margin-top: 40px; /* Отступ сверху от карточки */
+    padding-bottom: 20px;
+}
+
+/* Стили самой кнопки */
+.btn-more {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #7c3aed; 
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px; /* Скругленные углы под стиль карточек */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(47, 128, 237, 0.3);
+}
+
+/* Эффект при наведении курсора */
+.btn-more:hover {
+    background-color: #7c3aed; 
+    transform: translateY(-2px); /* Легкий подъем вверх */
+    box-shadow: 0 6px 20px rgba(47, 128, 237, 0.5);
+}
+
+/* Эффект при нажатии */
+.btn-more:active {
+    transform: translateY(0);
+}
