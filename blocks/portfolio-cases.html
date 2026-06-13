@@ -1,0 +1,52 @@
+<section class="portfolio-section">
+    <div class="container">
+        <h1 class="portfolio-main-title">ПРИМЕРЫ РАБОТ</h1>
+        <p class="portfolio-main-subtitle">Реальные кейсы: от чистой адаптивной верстки до сочного видеомонтажа.</p>
+        
+        <div class="portfolio-category">
+            <h2 class="category-title">// ВЕБ-РАЗРАБОТКА И ВЕРСТКА</h2>
+            <div class="portfolio-grid">
+                
+                <!-- 1. Твоя обычная карточка кейса -->
+                <div class="portfolio-card">
+                    <div class="card-image-box">
+                        <img src="assets/images/case-site-1.png" alt="Кейс Сайта" class="case-img">
+                    </div>
+                    <div class="card-info">
+                        <span class="card-tag">HTML5 / CSS3 / VITE</span>
+                        <h3>Сайт-портфолио команды hizsquad</h3>
+                        <p>Полный адаптив, кастомный плеер и чистый код.</p>
+                        
+                        <!-- Важная кнопка! data-modal связывает её с плашкой ниже -->
+                        <button class="case-link open-modal-btn" data-modal="modal-case-1">Подробнее о проекте →</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. А вот сама плашка (пока она невидимая). Она имеет id="modal-case-1" -->
+<div id="modal-case-1" class="portfolio-modal">
+    <div class="modal-overlay"></div> <!-- Темный задний фон -->
+    <div class="modal-window">
+        <!-- Крестик для закрытия -->
+        <button class="modal-close-btn">&times;</button>
+        
+        <!-- Контент внутри плашки -->
+        <div class="modal-content-grid">
+            <div class="modal-image-side">
+                <img src="assets/images/case-site-1.png" alt="Скриншот">
+            </div>
+            <div class="modal-text-side">
+                <span class="modal-tag">КЕЙС // ВЕРСТКА</span>
+                <h2>Сайт-портфолио hizsquad</h2>
+                <p>Здесь пишем подробный разбор работы: задачи, стек, фичи.</p>
+                <div class="modal-actions">
+                    <a href="index.html" class="modal-btn-primary">Открыть живой сайт</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
