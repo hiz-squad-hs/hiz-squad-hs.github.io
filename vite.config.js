@@ -4,15 +4,15 @@ import { resolve } from 'path';
 
 export default defineConfig({
   base: '/hizsite/', 
-  plugins: [injectHTML()],
+  plugins: [injectHTML()], // ИСПРАВИЛИ СТРОЧКУ ТУТ!
   build: {
-    outDir: 'docs',
-    // Говорим Vite собирать обе страницы, чтобы они долетали до Гитхаба
+    outDir: 'docs', 
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
         notfound: resolve(__dirname, '404.html'),
-        page2: resolve(__dirname, 'page2.html') // если есть вторая страница
+        page2: resolve(__dirname, 'page2.html'),
+        portfolio: resolve(__dirname, 'portfolio.html') 
       }
     }
   },
