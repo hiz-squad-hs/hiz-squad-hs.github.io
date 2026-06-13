@@ -4,21 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная hizsquad</title>
-    <link rel="icon" type="image/png" href="https://i.ibb.co/7J3mrhsk/1.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/trailer.css">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/7J3mrhsk/1.png">
+  <link rel="stylesheet" crossorigin href="/hizsite/assets/index-BUlrNqKv.css">
 </head>
 <body>
 
 <body>
 
     <!-- 1. ПОДКЛЮЧАЕМ БЛОКИ САЙТА -->
-    <load src="blocks/header.html" />
-    <load src="blocks/hero.html" />
-    <load src="blocks/trailer.html" />
-    <load src="blocks/projects.html" />
-    <load src="blocks/feedback.html" />
-    <load src="blocks/footer.html" />
+    <!-- ШАПКА САЙТА: Логотип и навигация -->
+<header class="header">
+    <div class="logo">hizsquad</div>
+    <nav class="nav">
+        <a href="#about" class="nav-link">Обо мне</a>
+        <a href="#projects" class="nav-link">Проекты</a>
+        <a href="#feedback" class="nav-link">Контакты</a>
+    </nav>
+</header>
+
+    <!-- ГЛАВНЫЙ БЛОК: Приветствие и кнопки -->
+<section class="hero-section" id="about">
+    <div class="hero-content">
+        <span class="badge">Доступен для крутых проектов</span>
+        <h1 class="hero-title">Привет, мы <br><span>Команда hizsquad</span></h1>
+        <p class="hero-subtitle">Вайбкодю стильные веб-приложения и создаю интерфейсы, которые работают.</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Смотреть проекты</a>
+            <a href="#feedback" class="btn btn-secondary">Связаться</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Блок Главного Трейлера -->
+<section class="trailer-section">
+    <div class="container">
+<p class="trailer-subtitle">Кто мы, чем мы занимаемся, </p>
+        
+        <!-- Контейнер для видео -->
+        <div class="video-wrapper">
+            <!-- Поставь строго этот адрес, чтобы проверить видео -->
+<iframe 
+    src="https://youtube.com" 
+    title="Hizsquad Trailer" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+</iframe>
+
+        </div>
+
+        <!-- Кнопка перехода к работам -->
+        <div class="trailer-action">
+            <a href="page2.html" class="btn-goto-works">Перейти к примерам работ →</a>
+        </div>
+    </div>
+</section>
+
+    <!-- БЛОК ПРОЕКТОВ: Сетка из карточек -->
+<section class="projects-section" id="projects">
+    <h2 class="section-title">Мои Проекты</h2>
+    
+    <div class="projects-grid">
+        <!-- Карточка 1 -->
+        <div class="project-card">
+            <div class="card-status">В разработке</div>
+            <h3 class="card-title">Сайт-портфолио</h3>
+            <p class="card-text">Тот самый сайт, на котором ты сейчас находишься. Полный модульный фэншуй.</p>
+            <div class="card-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Git</span>
+            </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="project-card">
+            <div class="card-status done">Готово</div>
+            <h3 class="card-title">Crypto Dashboard</h3>
+            <p class="card-text">Интерфейс для отслеживания курсов криптовалют с темной темой и графиками.</p>
+            <div class="card-tags">
+                <span>JavaScript</span>
+                <span>API</span>
+                <span>CSS Grid</span>
+            </div>
+        </div>
+        <!-- Кнопка перехода на вторую страницу -->
+<div class="projects-action">
+    <a href="page2.html" class="btn-more">Посмотреть все услуги</a>
+</div>
+
+    </div>
+</section>
+
+    <div class="contacts-grid">
+    
+    <!-- Карточка 1: Обратная связь -->
+    <div class="contacts-group">
+        <h3>Обратная связь</h3>
+        <div class="feedback-links">
+            <a href="404.html" class="telegram" target="_blank">Telegram</a>
+            
+            <!-- ДОБАВИЛИ ПОЧТУ (Она встанет рядом с Телегой) -->
+            <a href="mailto:твой_email@example.com" class="email">Почта</a>
+        </div>
+    </div>
+
+    <!-- Карточка 2: Профили -->
+    <div class="contacts-group" id="feedback"> 
+        <h3>Мои профили</h3>
+        <div class="feedback-links">
+            <a href="404.html" target="_blank">GitHub</a>
+            
+            <!-- ДОБАВИЛИ ДИСКОРД (Он встанет рядом с Гитхабом) -->
+            <a href="404.html" class="discord" target="_blank">Discord</a>
+        </div>
+    </div>
+
+</div>
+
+<footer class="p2-footer">
+        <div class="p2-container">
+            <p>© 2026 Создано командой разработки hizsquad <br> Все права защищены. <br> <span class="footer-signature">hs</span></p> 
+
+        </div>
+    </footer>
 
     <!-- 2. СКРИПТ ПЕРЕКЛЮЧЕНИЯ ТЕХРАБОТ -->
     <script>
