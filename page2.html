@@ -3,75 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас и услуги</title>
-    <!-- Подключаем отдельный CSS файл, чтобы не сломать первую страницу -->
-    <link rel="stylesheet" href="css/page2.css">
+    <title>Hizsquad — Услуги и Цены</title>
+    <!-- Общие стили -->
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Подключаем отдельные CSS файлы для каждого блока на этой странице -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/services.css"> <!-- НАШИ НОВЫЕ СТИЛИ -->
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
-    <!-- Шапка страницы -->
-    <header class="p2-header">
-        <div class="p2-container">
-            <a href="index.html" class="p2-logo">hizsquad</a>
-            <nav class="p2-nav">
-                <a href="index.html">Главная</a>
-                <a href="page2.html" class="p2-active">Услуги и О нас</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Блок "О компании" -->
-    <section class="p2-about-section">
-        <div class="p2-container">
-            <h1 class="p2-title">О нашем проекте</h1>
-            <p class="p2-subtitle">Мы помогаем решать ваши задачи быстро, качественно и надежно.</p>
-            <div class="p2-about-grid">
-                <div class="p2-about-text">
-                    <h3>Кто мы такие?</h3>
-                    <p>Наша команда создает полезные и современные решения. Мы ценим время каждого клиента. Наша главная цель — сделать сложный процесс простым для вас.</p>
-                </div>
-                <div class="p2-about-text">
-                    <h3>Почему выбирают нас?</h3>
-                    <p>Мы работаем на результат. Используем только проверенные подходы. Всегда на связи и готовы помочь на любом этапе работы.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Блок "Наши услуги" -->
-    <section class="p2-services-section">
-        <div class="p2-container">
-            <h2 class="p2-title">Что мы предлагаем</h2>
-            <div class="p2-services-grid">
-                <div class="p2-card">
-                    <div class="p2-icon">🚀</div>
-                    <h3>Быстрый старт</h3>
-                    <p>Запуск вашего проекта в самые кратчайшие сроки без потери качества.</p>
-                </div>
-                <div class="p2-card">
-                    <div class="p2-icon">🛠️</div>
-                    <h3>Поддержка</h3>
-                    <p>Помогаем и ведем проект после сдачи. Исправляем любые ошибки.</p>
-                </div>
-                <div class="p2-card">
-                    <div class="p2-icon">📈</div>
-                    <h3>Развитие</h3>
-                    <p>Помогаем вашему делу расти и привлекать новых клиентов каждый день.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Пустой контейнер для подвала -->
-<div id="footer-placeholder"></div>
-
-<!-- Скрипт, который его загрузит -->
-<script>
-    fetch('blocks/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
-</script>
+    <load src="blocks/header.html" />
+    <load src="blocks/services.html" />
+    <load src="blocks/feedback.html" />
+    <load src="blocks/footer.html" />
 
 </body>
 </html>

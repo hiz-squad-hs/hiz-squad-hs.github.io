@@ -1,0 +1,94 @@
+/* ==========================================================================
+   БЛОК УСЛУГ (Вторая страница)
+   ========================================================================== */
+.services-section {
+    padding: 100px 0 60px 0;
+    text-align: center;
+    background: #0b071e;
+}
+
+.services-main-title {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.services-main-subtitle {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #928aa9;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+/* Сетка для карточек */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap; /* Чтобы карточки переносились на мобилках */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Карточка услуги */
+.service-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 340px;
+    background: #140e2e;
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(47, 128, 237, 0.3);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #928aa9;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Прижимает цену к низу */
+}
+
+.service-price {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2f80ed;
+    letter-spacing: 1px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .services-main-title { font-size: 32px; }
+    .services-grid { flex-direction: column; align-items: center; }
+    .service-card { max-width: 100%; width: 100%; }
+}
