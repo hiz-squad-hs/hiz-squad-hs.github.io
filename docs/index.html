@@ -6,17 +6,24 @@
     <title>Hizsquad — Главная</title>
     <link rel="stylesheet" href="css/shared.css">
   <link rel="stylesheet" crossorigin href="/hizsite/assets/main-CFdNzhZv.css">
-  <link rel="stylesheet" crossorigin href="/hizsite/assets/footer-C-mud3gM.css">
+  <link rel="stylesheet" crossorigin href="/hizsite/assets/footer-CvMhkJBC.css">
 </head>
 <body>
-    <!-- ШАПКА САЙТА: Логотип и навигация -->
-<header class="header">
-    <div class="logo">hizsquad</div>
-    <nav class="nav">
-        <a href="#about" class="nav-link">Обо мне</a>
-        <a href="#projects" class="nav-link">Проекты</a>
-        <a href="#feedback" class="nav-link">Контакты</a>
+    <header class="site-header">
+    <!-- Название/Лого слева -->
+    <a href="index.html" class="header-logo">hizsquad</a>
+
+    <!-- Меню по центру -->
+    <nav class="header-nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="page2.html" class="nav-link">Услуги</a></li>
+            <li><a href="portfolio.html" class="nav-link">Портфолио</a></li>
+        </ul>
     </nav>
+
+    <!-- Кнопка скролла справа -->
+    <a href="#contacts" class="btn-connect">Связаться</a>
 </header>
 
     <!-- ГЛАВНЫЙ БЛОК: Приветствие и кнопки -->
@@ -130,6 +137,37 @@
         if (isMaintenanceMode && !window.location.hostname.includes('localhost')) {
             window.location.href = 'maintenance.html';
         }
-    </script> 
+    
+        // Ищем все кнопки открытия модалок
+        const openButtons = document.querySelectorAll('.open-modal-btn');
+        
+        openButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modalId = btn.getAttribute('data-modal');
+                const targetModal = document.getElementById(modalId);
+                if (targetModal) {
+                    targetModal.style.display = 'flex'; // Показываем окно
+                    document.body.style.overflow = 'hidden'; // Запрещаем скролл сайта на фоне
+                }
+            });
+        });
+
+        // Находим все кнопки закрытия и оверлеи, чтобы прятать окно обратно
+        const modals = document.querySelectorAll('.portfolio-modal');
+        modals.forEach(modal => {
+            const closeBtn = modal.querySelector('.modal-close-btn');
+            const overlay = modal.querySelector('.modal-overlay');
+            
+            const closeModal = () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Возвращаем скролл сайту
+            };
+
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (overlay) overlay.addEventListener('click', closeModal); // Закрыть при клике мимо окна
+        });
+    </script>
+
+     
 </body>
 </html>
