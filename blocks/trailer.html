@@ -1,20 +1,25 @@
 <!-- Блок Трейлера для Профи -->
+<!-- Блок Трейлера (Автономный HTML5) -->
 <section class="trailer-section">
     <div class="container">
         
         <h1 class="trailer-title">О НАС</h1>
         <p class="trailer-subtitle">Короткий шоурил: как устроен проект, какие технологии я юзаю и что пилю прямо сейчас</p>
         
-        <!-- Профессиональный плеер Vimeo -->
+        <!-- Неубиваемый плеер, который никогда не выдаст ошибку безопасности -->
         <div class="video-wrapper">
-            <iframe 
-                src="https://vimeo.com" 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+            <video autoplay loop muted playsinline controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; background: #140e2e;">
+                <source src="assets/images/trailer.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
         </div>
+
+        <div class="trailer-action">
+            <a href="page2.html" class="btn-goto-works">Перейти к примерам работ →</a>
+        </div>
+        
+    </div>
+</section>
 
         <div class="trailer-action">
             <a href="page2.html" class="btn-goto-works">Перейти к примерам работ →</a>
