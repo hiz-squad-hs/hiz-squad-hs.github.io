@@ -5,38 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Технические работы — hizsquad</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/maintenance.css">
 </head>
 <body>
 
-    <!-- Секция техработ -->
-    <section class="maintenance-section">
-        <!-- Карточка снова чистая и аккуратная -->
-        <div class="maintenance-content">
+    <div class="m-page-wrapper">
+        
+        <!-- 1. Главный блок техработ -->
+        <div class="m-main-card">
+            <div class="m-logo-group">
+                <img src="png/hss.png" alt="Logo" class="m-logo-img">
+                <div class="m-brand-name">hiz squad</div>
+            </div>
             
-           <div class="maintenance-header-block">
-    <!-- Чистая картинка, без лишних тегов вокруг -->
-    <img src="https://i.ibb.co/7J3mrhsk/1.png" alt="Logo" class="maintenance-side-logo">
-    <div class="maintenance-brand">hiz squad</div>
-</div>
-
-            
-            <h1 class="maintenance-title">ТЕХНИЧЕСКИЕ РАБОТЫ</h1>
-            <p class="maintenance-text">
-                Обновляем архитектуру проекта, пересобираем стили и наводим порядок в ассетах. 
-                Сайт скоро вернется в строй. 
-                <br> С уважением команда разработки hizsquad
+            <h1 class="m-headline">Технические работы</h1>
+            <p class="m-description">
+                Обновляем архитектуру проекта, пересобираем стили и наводим порядок в ассетах. Сайт скоро вернется в строй.<br>
+                С уважением, команда разработки hizsquad
             </p>
-            <div class="maintenance-status">system_status: v0.3.3 // optimization</div>
+            
+            <div class="m-status-badge">system_status: v0.3.3 // optimization</div>
         </div>
-    </section>
 
-    <!-- Форма обратной связи -->
-    <load src="blocks/feedback.html" />
+        <!-- 2. Обратная связь -->
+        <load src="blocks/feedback.html" />
+        
 
-    <!-- Подвал сайта -->
-    <load src="blocks/footer.html" />
+        <!-- 4. Подвал -->
+        <load src="blocks/footer.html"/>
+
+    </div>
 
 </body>
-
 </html>
