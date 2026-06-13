@@ -1,0 +1,19 @@
+.footer {
+    padding: 40px 10%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    color: #7c3aed;
+    font-size: 0.85rem;
+}
+/* Стили для твоего сокращения-автографа */
+.footer-signature {
+    font-family: 'Courier New', Courier, monospace; /* Консольный стиль */
+    font-size: 16px;
+    font-weight: 700;
+    color: #7c3aed; /* Твой фирменный синий неон */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 10px; /* Отодвигаем от верхней строчки */
+    opacity: 0.9;
+}

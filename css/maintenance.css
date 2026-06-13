@@ -1,0 +1,143 @@
+/* ==========================================================================
+   1. БАЗОВЫЕ НАСТРОЙКИ СТРАНИЦЫ (Убираем рамки и боковой скролл)
+   ========================================================================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Жестко запрещает странице крутиться вбок */
+    background-color: #0b071e; /* Наш глубокий темный фон */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. ГЛАВНАЯ СЕКЦИЯ С КАРТОЧКОЙ
+   ========================================================================== */
+.maintenance-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh; /* Место по центру, чтобы снизу аккуратно встала форма */
+    padding: 60px 20px 20px 20px;
+    background: radial-gradient(circle at center, #150e36 0%, #0b071e 80%);
+}
+
+/* Строгая кибер-карточка */
+.maintenance-content {
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    background: rgba(20, 14, 46, 0.4);
+    backdrop-filter: blur(12px);
+    padding: 50px 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   3. ШАПКА КАРТОЧКИ: ЛОГОТИП И НАЗВАНИЕ В ОДИН РЯД
+   ========================================================================== */
+.maintenance-header-block {
+    display: flex;
+    align-items: center;      /* Держит огромный логотип и текст строго вровень */
+    justify-content: center;  /* Центрирует всю связку по центру карточки */
+    gap: 25px;                /* Отступ между картинкой и текстом */
+    margin-bottom: 35px;      
+}
+
+/* Картинка-логотип слева */
+.maintenance-side-logo {
+    width: 100px;             /* Твой массивный размер */
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    /* Запускаем плавную левитацию: 4 секунды на круг, мягко и бесконечно */
+    animation: cyberFloat 4s ease-in-out infinite; 
+}
+
+/* Текстовое название бренда справа */
+.maintenance-brand {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 32px;          
+    font-weight: 800;         
+    color: #2f80ed;           
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    opacity: 0.95;
+    line-height: 1;           
+}
+
+
+
+/* ==========================================================================
+   4. ТЕКСТ И КОНСОЛЬНЫЙ СТАТУС
+   ========================================================================== */
+.maintenance-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.maintenance-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #928aa9;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Строгий статус в стиле хакерской консоли */
+.maintenance-status {
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    font-size: 13px;
+    color: #524b70;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   5. АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ ТЕЛЕФОНЫ
+   ========================================================================== */
+@media (max-width: 480px) {
+    .maintenance-content {
+        padding: 40px 20px;
+    }
+    .maintenance-title {
+        font-size: 24px;
+    }
+    .maintenance-side-logo {
+        width: 55px;
+        height: 55px;
+    }
+    .maintenance-brand {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+}
+/* ==========================================================================
+   6. ПРАВИЛА АНИМАЦИИ (Добавь в самый-самый конец файла)
+   ========================================================================== */
+@keyframes cyberFloat {
+    0% {
+        transform: translateY(0px) scale(1);
+        filter: drop-shadow(0 0 5px rgba(47, 128, 237, 0.4));
+    }
+    50% {
+        transform: translateY(-6px) scale(1.03); /* Мягко взлетает вверх и чуть увеличивается */
+        filter: drop-shadow(0 0 20px rgba(47, 128, 237, 0.8)); /* Разгорается неоновое свечение */
+    }
+    100% {
+        transform: translateY(0px) scale(1);
+        filter: drop-shadow(0 0 5px rgba(47, 128, 237, 0.4));
+    }
+}

@@ -9,51 +9,28 @@
 </head>
 <body>
 
+<body>
+
+    <!-- 1. ПОДКЛЮЧАЕМ БЛОКИ САЙТА -->
+    <load src="blocks/header.html" />
+    <load src="blocks/hero.html" />
+    <load src="blocks/projects.html" />
+    <load src="blocks/feedback.html" />
+    <load src="blocks/footer.html" />
+
+    <!-- 2. СКРИПТ ПЕРЕКЛЮЧЕНИЯ ТЕХРАБОТ -->
+    <script>
+        // false — сайт работает для всех. true — всех перекинет на техработы.
+        const isMaintenanceMode = false; 
+
+        if (isMaintenanceMode && !window.location.hostname.includes('localhost')) {
+            window.location.href = 'maintenance.html';
+        }
+    </script>
+
+</body>
 
 
     
-    <!-- Настройка: 1 — техработы включены, 0 — сайт работает нормально -->
-    <script> const ТЕХ_РАБОТЫ = 0; </script>
-
-
-    <!-- ТЕКСТ ДЛЯ ТЕХРАБОТ (показывается, если сверху стоит 1) -->
-    <div id="maintenance-text" style="display: none; text-align: center; margin-top: 20vh; font-family: sans-serif; color: #38bdf8;">
-        <h1 style="font-size: 3rem;">🛠️ Технические работы</h1>
-        <p style="color: #94a3b8; font-size: 1.2rem; margin-top: 10px;">Обновляем контент возвращайтесь позже с уважение команда разроботки hizsquad</p>
-    </div>
-
-
-    <!-- КОНТЕНТ САЙТА (автоматически скроется, если включены техработы) -->
-    <div id="site-content">
-        <div id="block-header"></div>
-        <div id="block-hero"></div>
-        <div id="block-projects"></div>
-        <div id="block-contacts"></div>
-        <div id="block-feedback"></div>
-    </div>
-
-
-    <!-- СКРИПТ СБОРКИ И ПЕРЕКЛЮЧЕНИЯ -->
-    <script>
-        if (ТЕХ_РАБОТЫ === 1) {
-            // Если включено, показываем текст техработ и прячем сам сайт
-            document.getElementById("maintenance-text").style.display = "block";
-            document.getElementById("site-content").style.display = "none";
-            document.body.style.backgroundColor = "#0b0f19"; 
-        } else {
-            // Если выключено (0), то просто загружаем наши блоки как обычно
-            function loadBlock(elementId, filePath) {
-                fetch(filePath)
-                    .then(res => res.text())
-                    .then(html => document.getElementById(elementId).innerHTML = html)
-                    .catch(err => console.error(err));
-            }
-            loadBlock("block-header", "blocks/header.html");
-            loadBlock("block-hero", "blocks/hero.html");
-            loadBlock("block-projects", "blocks/projects.html");
-            loadBlock("block-contacts", "blocks/contacts.html");
-        }   loadBlock("block-feedback", "blocks/feedback.html");
-    </script>
-
 </body>
 </html>

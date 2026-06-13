@@ -12,7 +12,7 @@
     <!-- Шапка страницы -->
     <header class="p2-header">
         <div class="p2-container">
-            <a href="index.html" class="p2-logo">МойСайт</a>
+            <a href="index.html" class="p2-logo">hizsquad</a>
             <nav class="p2-nav">
                 <a href="index.html">Главная</a>
                 <a href="page2.html" class="p2-active">Услуги и О нас</a>
@@ -61,14 +61,17 @@
             </div>
         </div>
     </section>
+<!-- Пустой контейнер для подвала -->
+<div id="footer-placeholder"></div>
 
-    <!-- Подвал -->
-    <footer class="p2-footer">
-        <div class="p2-container">
-            <p> © 2026 Создано командой разроботки hizsquad
-                <br>Все права защищены.</p>
-        </div>
-    </footer>
+<!-- Скрипт, который его загрузит -->
+<script>
+    fetch('blocks/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
 
 </body>
 </html>
