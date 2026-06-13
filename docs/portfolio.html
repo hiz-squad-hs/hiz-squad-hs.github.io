@@ -97,57 +97,155 @@
     <a href="#contacts" class="btn-connect">Связаться</a>
 </header>
 
-    <section class="portfolio-section">
-    <div class="container">
-        <h1 class="portfolio-main-title">ПРИМЕРЫ РАБОТ</h1>
-        <p class="portfolio-main-subtitle">Реальные кейсы: от чистой адаптивной верстки до сочного видеомонтажа.</p>
-        
-        <div class="portfolio-category">
-            <h2 class="category-title">// ВЕБ-РАЗРАБОТКА И ВЕРСТКА</h2>
-            <div class="portfolio-grid">
-                
-                <!-- 1. Твоя обычная карточка кейса -->
-                <div class="portfolio-card">
-                    <div class="card-image-box">
-                        <img src="assets/images/case-site-1.png" alt="Кейс Сайта" class="case-img">
-                    </div>
-                    <div class="card-info">
-                        <span class="card-tag">HTML5 / CSS3 / VITE</span>
-                        <h3>Сайт-портфолио команды hizsquad</h3>
-                        <p>Полный адаптив, кастомный плеер и чистый код.</p>
-                        
-                        <!-- Важная кнопка! data-modal связывает её с плашкой ниже -->
-                        <button class="case-link open-modal-btn" data-modal="modal-case-1">Подробнее о проекте →</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <!-- СЕТКА ИЗ 4 КАРТОЧЕК С УВЕЛИЧЕННЫМ ОТСТУПОМ СВЕРХУ (100PX) -->
+<div class="portfolio-grid-fixed" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); gap: 24px; max-width: 1200px; margin: 100px auto 0 auto; padding: 0 16px; box-sizing: border-box; position: relative; z-index: 1;">
+  
+  <!-- КАРТОЧКА 1: САЙТ-ПОРТФОЛИО -->
+  <div class="case-card" style="background: #0b0b16; border-radius: 12px; padding: 24px; border: 1px solid #1a1a2e; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: 400px;">
+    <div>
+      <div class="case-image" style="width: 100%; height: 180px; background: #131326; border-radius: 8px; overflow: hidden; border: 1px solid #1f1f3d;">
+        <img src="/hizsite/assets/2-CIFINvCn.png" alt="Сайт" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="case-tags" style="margin-top: 16px; font-size: 11px; color: #555577; text-transform: uppercase; letter-spacing: 1px; font-family: monospace;">
+        HTML / CSS / VITE
+      </div>
+      <h3 class="case-title" style="margin-top: 12px; font-size: 18px; color: #ffffff; font-family: sans-serif; font-weight: 600;">Сайт-portfolio HS</h3>
+      <p class="case-text" style="margin-top: 8px; font-size: 13px; color: #777799; line-height: 1.5; font-family: sans-serif;">Полный адаптив, кастомный плеер и чистый код.</p>
     </div>
-</section>
+    <a href="#popup-site" class="case-link" style="display: inline-block; color: #0077ff; text-decoration: underline; font-size: 13px; font-family: sans-serif; font-weight: bold; margin-top: auto; cursor: pointer; position: relative; z-index: 10;">Подробнее о проекте →</a>
+  </div>
 
-<!-- 2. А вот сама плашка (пока она невидимая). Она имеет id="modal-case-1" -->
-<div id="modal-case-1" class="portfolio-modal">
-    <div class="modal-overlay"></div> <!-- Темный задний фон -->
-    <div class="modal-window">
-        <!-- Крестик для закрытия -->
-        <button class="modal-close-btn">&times;</button>
-        
-        <!-- Контент внутри плашки -->
-        <div class="modal-content-grid">
-            <div class="modal-image-side">
-                <img src="assets/images/case-site-1.png" alt="Скриншот">
-            </div>
-            <div class="modal-text-side">
-                <span class="modal-tag">КЕЙС // ВЕРСТКА</span>
-                <h2>Сайт-портфолио hizsquad</h2>
-                <p>Здесь пишем подробный разбор работы: задачи, стек, фичи.</p>
-                <div class="modal-actions">
-                    <a href="index.html" class="modal-btn-primary">Открыть живой сайт</a>
-                </div>
-            </div>
-        </div>
+  <!-- КАРТОЧКА 2: ВИДЕОМОНТАЖ -->
+  <div class="case-card" style="background: #0b0b16; border-radius: 12px; padding: 24px; border: 1px solid #1a1a2e; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: 400px;">
+    <div>
+      <div class="case-image" style="width: 100%; height: 180px; background: #131326; border-radius: 8px; overflow: hidden; border: 1px solid #1f1f3d;">
+        <img src="https://unsplash.com" alt="Монтаж" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="case-tags" style="margin-top: 16px; font-size: 11px; color: #555577; text-transform: uppercase; letter-spacing: 1px; font-family: monospace;">
+        PREMIERE / AFTER EFFECTS
+      </div>
+      <h3 class="case-title" style="margin-top: 12px; font-size: 18px; color: #ffffff; font-family: sans-serif; font-weight: 600;">Сочный видеомонтаж</h3>
+      <p class="case-text" style="margin-top: 8px; font-size: 13px; color: #777799; line-height: 1.5; font-family: sans-serif;">Динамичные переходы, чистый звук и цветокоррекция под ключ.</p>
     </div>
+    <a href="#popup-video" class="case-link" style="display: inline-block; color: #0077ff; text-decoration: underline; font-size: 13px; font-family: sans-serif; font-weight: bold; margin-top: auto; cursor: pointer; position: relative; z-index: 10;">Подробнее о проекте →</a>
+  </div>
+
+  <!-- КАРТОЧКА 3: ОБУЧЕНИЕ / ГАЙДЫ -->
+  <div class="case-card" style="background: #0b0b16; border-radius: 12px; padding: 24px; border: 1px solid #1a1a2e; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: 400px;">
+    <div>
+      <div class="case-image" style="width: 100%; height: 180px; background: #131326; border-radius: 8px; overflow: hidden; border: 1px solid #1f1f3d;">
+        <img src="https://unsplash.com" alt="Курсы" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="case-tags" style="margin-top: 16px; font-size: 11px; color: #555577; text-transform: uppercase; letter-spacing: 1px; font-family: monospace;">
+        EDUCATION / GUIDES
+      </div>
+      <h3 class="case-title" style="margin-top: 12px; font-size: 18px; color: #ffffff; font-family: sans-serif; font-weight: 600;">Бесплатные уроки</h3>
+      <p class="case-text" style="margin-top: 8px; font-size: 13px; color: #777799; line-height: 1.5; font-family: sans-serif;">Обучающие туториалы по верстке сайтов и монтажу видео для новичков.</p>
+    </div>
+    <a href="#popup-edu" class="case-link" style="display: inline-block; color: #0077ff; text-decoration: underline; font-size: 13px; font-family: sans-serif; font-weight: bold; margin-top: auto; cursor: pointer; position: relative; z-index: 10;">Подробнее о проекте →</a>
+  </div>
+
+  <!-- КАРТОЧКА 4: БОТЫ / РАЗРАБОТКА -->
+  <div class="case-card" style="background: #0b0b16; border-radius: 12px; padding: 24px; border: 1px solid #1a1a2e; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: 400px;">
+    <div>
+      <div class="case-image" style="width: 100%; height: 180px; background: #131326; border-radius: 8px; overflow: hidden; border: 1px solid #1f1f3d;">
+        <img src="https://unsplash.com" alt="Скрипты" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="case-tags" style="margin-top: 16px; font-size: 11px; color: #555577; text-transform: uppercase; letter-spacing: 1px; font-family: monospace;">
+        TG / DISCORD BOTS / MINECRAFT
+      </div>
+      <h3 class="case-title" style="margin-top: 12px; font-size: 18px; color: #ffffff; font-family: sans-serif; font-weight: 600;">Боты и плагины под ключ</h3>
+      <p class="case-text" style="margin-top: 8px; font-size: 13px; color: #777799; line-height: 1.5; font-family: sans-serif;">Разработка автоматизации для соцсетей и серверов Майнкрафт любой сложности.</p>
+    </div>
+    <a href="#popup-dev" class="case-link" style="display: inline-block; color: #0077ff; text-decoration: underline; font-size: 13px; font-family: sans-serif; font-weight: bold; margin-top: auto; cursor: pointer; position: relative; z-index: 10;">Подробнее о проекте →</a>
+  </div>
+
+</div>
+<!-- ЧАСТЬ 2: СТИЛИ И 4 ВСПЛЫВАЮЩИХ ОКНА -->
+<style>
+  .popup-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 5, 10, 0.85); backdrop-filter: blur(5px);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 9999;
+  }
+  .popup-overlay:target { opacity: 1; pointer-events: auto; }
+  .popup-content {
+    background: #0b0b16; border: 1px solid #1a1a2e; border-radius: 16px;
+    padding: 32px; max-width: 500px; width: 90%; box-sizing: border-box;
+    position: relative; color: #ffffff; font-family: sans-serif;
+  }
+  .popup-close {
+    position: absolute; top: 16px; right: 20px; color: #555577;
+    text-decoration: none; font-size: 24px; font-weight: bold;
+  }
+  .popup-close:hover { color: #ffffff; }
+  .popup-img-box {
+    width: 100%; height: 200px; background: #131326; border: 1px solid #1f1f3d; 
+    border-radius: 8px; overflow: hidden; margin-bottom: 20px; 
+    display: flex; align-items: center; justify-content: center;
+  }
+  .popup-img-box img { width: 100%; height: 100%; object-fit: cover; }
+</style>
+
+<!-- ОКНО 1: САЙТ -->
+<div id="popup-site" class="popup-overlay">
+  <div class="popup-content">
+    <a href="#" class="popup-close">&times;</a>
+    <div class="popup-img-box">
+      <img src="/hizsite/assets/1-BWpi4X7f.png" alt="Превью">
+    </div>
+    <h3 style="font-size: 22px; margin-top: 0; color: #0077ff;">Проект: Сайт HS</h3>
+    <p style="color: #777799; font-size: 14px; line-height: 1.6; margin-top: 12px;">
+      Подробный разбор нашей веб-разработки. Здесь мы покажем, как собирали этот адаптивный шаблон, кастомные элементы интерфейса и чистую структуру проекта.
+    </p>
+    <p style="color: #555577; font-size: 12px; margin-top: 20px; font-family: monospace;">Стек: HTML5 / CSS3 / JavaScript / Vite</p>
+  </div>
+</div>
+
+<!-- ОКНО 2: МОНТАЖ -->
+<div id="popup-video" class="popup-overlay">
+  <div class="popup-content">
+    <a href="#" class="popup-close">&times;</a>
+    <div class="popup-img-box">
+      <img src="https://unsplash.com" alt="Превью">
+    </div>
+    <h3 style="font-size: 22px; margin-top: 0; color: #0077ff;">Проект: Видеомонтаж под ключ</h3>
+    <p style="color: #777799; font-size: 14px; line-height: 1.6; margin-top: 12px;">
+      Примеры коммерческого монтажа. Динамичные склейки, работа с треками, наложение эффектов, цветокоррекция и саунд-дизайн для удержания аудитории.
+    </p>
+    <p style="color: #555577; font-size: 12px; margin-top: 20px; font-family: monospace;">Стек: Premiere Pro / After Effects</p>
+  </div>
+</div>
+
+<!-- ОКНО 3: КУРСЫ -->
+<div id="popup-edu" class="popup-overlay">
+  <div class="popup-content">
+    <a href="#" class="popup-close">&times;</a>
+    <div class="popup-img-box">
+      <img src="https://unsplash.com" alt="Превью">
+    </div>
+    <h3 style="font-size: 22px; margin-top: 0; color: #0077ff;">Проект: Обучение и Гайды</h3>
+    <p style="color: #777799; font-size: 14px; line-height: 1.6; margin-top: 12px;">
+      Пошаговые бесплатные уроки для тех, кто хочет научиться верстать сайты с нуля или круто собирать видеоролики. Простыми словами о сложных инструментах.
+    </p>
+    <p style="color: #555577; font-size: 12px; margin-top: 20px; font-family: monospace;">Направления: Веб-разработка / Видеомонтаж</p>
+  </div>
+</div>
+
+<!-- ОКНО 4: РАЗРАБОТКА (Скрипты/Боты) -->
+<div id="popup-dev" class="popup-overlay">
+  <div class="popup-content">
+    <a href="#" class="popup-close">&times;</a>
+    <div class="popup-img-box">
+      <img src="https://unsplash.com" alt="Превью">
+    </div>
+    <h3 style="font-size: 22px; margin-top: 0; color: #0077ff;">Проект: Боты и Плагины</h3>
+    <p style="color: #777799; font-size: 14px; line-height: 1.6; margin-top: 12px;">
+      Разработка технически сложных решений: боты авто-модерации для Discord и Telegram, кастомные плагины и моды для игровых серверов Minecraft под любые задачи.
+    </p>
+    <p style="color: #555577; font-size: 12px; margin-top: 20px; font-family: monospace;">Стек: Java / Node.js / Python</p>
+  </div>
 </div>
 
     <div class="contacts-grid">
