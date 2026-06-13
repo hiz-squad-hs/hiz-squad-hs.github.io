@@ -199,7 +199,8 @@
     </footer>
 
     <script>
-        const isMaintenanceMode = false; 
+        /*true технические работы включены false технические работы выключены*/
+        const isMaintenanceMode = true; 
         if (isMaintenanceMode && !window.location.hostname.includes('localhost')) {
             window.location.href = 'maintenance.html';
         }
