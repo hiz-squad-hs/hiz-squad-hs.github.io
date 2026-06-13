@@ -3,16 +3,17 @@ import injectHTML from 'vite-plugin-html-inject';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/hizsite/', 
-  plugins: [injectHTML()], // ИСПРАВИЛИ СТРОЧКУ ТУТ!
+  base: '/hizsite/',
+  plugins: [injectHTML()],
   build: {
-    outDir: 'docs', 
+    outDir: 'docs',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        maintenance: resolve(__dirname, 'maintenance.html'),
         notfound: resolve(__dirname, '404.html'),
         page2: resolve(__dirname, 'page2.html'),
-        portfolio: resolve(__dirname, 'portfolio.html') 
+        portfolio: resolve(__dirname, 'portfolio.html')
       }
     }
   },
