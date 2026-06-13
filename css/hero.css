@@ -5,14 +5,6 @@
     padding: 0 10%;
     padding-top: 80px;
 }
-.badge {
-    background-color: rgba(56, 189, 248, 0.1);
-    color: #38bdf8;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    border: 1px solid rgba(56, 189, 248, 0.2);
-}
 .hero-title {
     font-size: 3.5rem;
     margin-top: 20px;
@@ -42,7 +34,7 @@
 }
 .btn-primary {
     background-color: #7c3aed;
-    color: #0b0f19;
+    color: #ffffff;
 }
 .btn-primary:hover {
     background-color: #7c3aed;

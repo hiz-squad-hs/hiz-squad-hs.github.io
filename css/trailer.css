@@ -45,7 +45,7 @@
 .btn-goto-works {
     display: inline-block;
     padding: 16px 36px;
-    background: linear-gradient(90deg, #2f80ed, #5142a5);
+     background-color: #7c3aed;
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
@@ -65,4 +65,12 @@
 @media (max-width: 768px) {
     .trailer-title { font-size: 28px; }
     .btn-goto-works { width: 100%; padding: 14px 20px; }
+}
+.btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
