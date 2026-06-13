@@ -6,7 +6,7 @@
     <title>Hizsquad — Главная</title>
     <link rel="stylesheet" href="css/shared.css">
   <link rel="stylesheet" crossorigin href="/hizsite/assets/main-D1Qtw0eZ.css">
-  <link rel="stylesheet" crossorigin href="/hizsite/assets/footer-BkDU3Kha.css">
+  <link rel="stylesheet" crossorigin href="/hizsite/assets/footer-DwAMbs_E.css">
 </head>
 <body>
     <!-- Жесткие стили панели прямо в блоке -->
@@ -199,11 +199,13 @@
     </footer>
 
     <script>
-        /*true технические работы включены false технические работы выключены*/
-        const isMaintenanceMode = true; 
-        if (isMaintenanceMode && !window.location.hostname.includes('localhost')) {
-            window.location.href = 'maintenance.html';
-        }
+       // true — включить техработы, false — выключить
+const isMaintenance = true;
+
+if (isMaintenance && !location.pathname.includes('maintenance')) {
+    location.href = 'maintenance.html';
+}
+
     
         // Ищем все кнопки открытия модалок
         const openButtons = document.querySelectorAll('.open-modal-btn');
