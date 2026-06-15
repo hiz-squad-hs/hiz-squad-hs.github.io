@@ -64,6 +64,37 @@
             modal.style.display = "none";
         }
         }
+        // Функция для открытия нужного окна
+        function openChangelog(id) {
+            var targetModal = document.getElementById(id);
+            if (targetModal) {
+                targetModal.style.display = "block";
+
+                // БЛОКИРУЕМ СКРОЛЛ САЙТА ПРИ ОТКРЫТИИ
+                document.body.classList.add('no-scroll');
+            }
+        }
+
+        // Функция для закрытия нужного окна
+        function closeChangelog(id) {
+            var targetModal = document.getElementById(id);
+            if (targetModal) {
+                targetModal.style.display = "none";
+
+                // ВОЗВРАЩАЕМ СКРОЛЛ САЙТА ПРИ ЗАКРЫТИИ
+                document.body.classList.remove('no-scroll');
+            }
+        }
+
+        // Закрытие, если кликнули по темному фону вокруг окна
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+
+                // ТОЖЕ ВОЗВРАЩАЕМ СКРОЛЛ, ЕСЛИ КЛИКНУЛИ МИМО ОКНА
+                document.body.classList.remove('no-scroll');
+            }
+        }
 
     </script>
 
