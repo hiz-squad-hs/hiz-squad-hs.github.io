@@ -6,7 +6,7 @@
     <title>Hizsquad — Главная</title>
     <link rel="icon" type="image/png" href="https://i.ibb.co/7J3mrhsk/1.png">
   <link rel="stylesheet" crossorigin href="/hizsite/assets/main-DCi-oNVx.css">
-  <link rel="stylesheet" crossorigin href="/hizsite/assets/footer-CBjU-Fa8.css">
+  <link rel="stylesheet" crossorigin href="/hizsite/assets/footer-DdASt7b5.css">
 </head>
 <body>
     <!-- Жесткие стили панели прямо в блоке -->
@@ -181,6 +181,7 @@
             <span class="close-btn" onclick="closeChangelog('modal-portfolio')">&times;</span>
             <h2>Change Log: Сайт-hizsquad</h2>
             <div class="changelog-text">
+                <p><strong>v0.3.12</strong> — Добавил ссылки на соц сети.</p>
                 <p><strong>v0.3.11</strong> — Добавил favicon.</p>
                 <p><strong>v0.3.10</strong> — поправил цвета кнопок, добавил версию внизу сайта и баг фикс.</p>
                 <p><strong>v0.3.9</strong> — баг фикс.</p>
@@ -258,10 +259,16 @@
     <div class="contacts-group">
         <h3>Обратная связь</h3>
         <div class="feedback-links">
-            <a href="404.html" class="telegram" target="_blank">Telegram</a>
+            <div class="feedback-buttons">
+            <a href="https://t.me/hizsquad" class="telegram" target="_blank">Telegram</a>
             
             <!-- ДОБАВИЛИ ПОЧТУ (Она встанет рядом с Телегой) -->
-            <a href="mailto:твой_email@example.com" class="email">Почта</a>
+                <button class="btn-link" onclick="openChangelog('modal-email')">Почта</button>
+
+
+            <!-- <a href="404.html" class="telegram" target="_blank">Telegram</a> -->
+
+            </div>
         </div>
     </div>
 
@@ -269,21 +276,36 @@
     <div class="contacts-group" id="feedback"> 
         <h3>Мои профили</h3>
         <div class="feedback-links">
-            <a href="404.html" target="_blank">GitHub</a>
-            
+            <a href="https://github.com/hizsquad" target="_blank">GitHub</a>
+
+            <a href="https://t.me/hizsquad911" class="telegram" target="_blank">Telegram</a>
+
+
+
             <!-- ДОБАВИЛИ ДИСКОРД (Он встанет рядом с Гитхабом) -->
-            <a href="404.html" class="discord" target="_blank">Discord</a>
+            <!-- <a href="404.html" class="discord" target="_blank">Discord</a> -->
         </div>
     </div>
-
+    <!-- Окно для почты закидываем в самый низ страницы (ЭТО HTML) -->
+    <div id="modal-email" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeChangelog('modal-email')">&times;</span>
+            <h2>Связаться по почте</h2>
+            <div class="changelog-text">
+                <p>Мой рабочий Email для связи и предложений:</p>
+                <p><strong>hizsquad@gmail.com</strong></p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <footer class="p2-footer">
         <div class="p2-container">
             <p>© 2026 Создано командой разработки hizsquad <br> Все права защищены. <br> <span class="footer-signature">hs</span></p>
-            <div class="site-version">v0.3.11</div>
+            <div class="site-version">v0.3.12</div>
         </div>
     </footer>
+
 
 
     <script>
