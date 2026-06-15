@@ -77,9 +77,9 @@
 }
 
 .changelog-btn:hover {
-    background: #6366f1; /* Фиолетовый цвет как на сайте */
+    background: #7c3aed; /* Фиолетовый цвет как на сайте */
     color: #ffffff;
-    border-color: #6366f1;
+    border-color: #a855f7;
 }
 
 /* ==========================================================================
@@ -100,14 +100,22 @@
 .modal-content {
     background-color: #0f0f1e;
     color: #ffffff;
-    margin: 15% auto;
+    margin: 10% auto; /* Немного уменьшили отступ сверху, чтобы окно поднялось */
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     width: 90%;
-    max-width: 450px;
+    max-width: 500px;
     border-radius: 14px;
     position: relative;
+
+    /* ======================================================== */
+    /* ДОБАВЬТЕ ЭТИ СТРОКИ, ЧТОБЫ ПОЯВИЛСЯ СКРОЛЛ ВНУТРИ ОКНА:   */
+    /* ======================================================== */
+    max-height: 70vh;          /* Окно займет максимум 70% от высоты экрана */
+    overflow-y: auto;          /* Появится скролл, если текст не влезает */
+    padding-right: 15px;       /* Отступ справа, чтобы текст не лип к скроллбару */
 }
+
 
 .close-btn {
     color: #64748b;
@@ -164,4 +172,8 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 
+}
+/* Этот класс убирает прокрутку у всего сайта */
+body.no-scroll {
+    overflow: hidden;
 }
