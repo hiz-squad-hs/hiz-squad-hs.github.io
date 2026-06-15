@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hizsquad — Главная</title>
-    <link rel="stylesheet" href="css/shared.css">
+    <title>Hizsquad — Главная</title>
   <link rel="stylesheet" crossorigin href="/hizsite/assets/main-DCi-oNVx.css">
-  <link rel="stylesheet" crossorigin href="/hizsite/assets/footer-DInN11-H.css">
+  <link rel="stylesheet" crossorigin href="/hizsite/assets/footer-D_YYgKZz.css">
 </head>
 <body>
     <!-- Жесткие стили панели прямо в блоке -->
@@ -131,40 +130,101 @@
 
     <!-- БЛОК ПРОЕКТОВ: Сетка из карточек -->
 <section class="projects-section" id="projects">
-    <h2 class="section-title">Мои Проекты</h2>
-    
-    <div class="projects-grid">
+    <h2 class="section-title">Наши проекты</h2>
+
+    <!-- 1. Сами карточки с проектами -->
+    <div class="projects-container">
+
         <!-- Карточка 1 -->
         <div class="project-card">
-            <div class="card-status">В разработке</div>
-            <h3 class="card-title">Сайт-портфолио</h3>
-            <p class="card-text">Тот самый сайт, на котором ты сейчас находишься. Полный модульный фэншуй.</p>
-            <div class="card-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Git</span>
+            <span class="status">В РАЗРАБОТКЕ</span>
+            <h3 class="project-title">Наш сайт</h3>
+            <p class="project-desc">Тот самый сайт, на котором ты сейчас находишься.</p>
+
+            <div class="card-footer">
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">git</span>
+                </div>
+                <!-- Кнопка вызывает функцию и передает ID первого окна -->
+                <button class="changelog-btn" onclick="openChangelog('modal-portfolio')">Ченджлог</button>
             </div>
         </div>
 
         <!-- Карточка 2 -->
         <div class="project-card">
-            <div class="card-status done">Готово</div>
-            <h3 class="card-title">Crypto Dashboard</h3>
-            <p class="card-text">Интерфейс для отслеживания курсов криптовалют с темной темой и графиками.</p>
-            <div class="card-tags">
-                <span>JavaScript</span>
-                <span>API</span>
-                <span>CSS Grid</span>
+            <span class="status-2">ГОТОВО</span>
+            <h3 class="project-title">Второй проект</h3>
+            <p class="project-desc">Описание вашего второго проекта.</p>
+
+            <div class="card-footer">
+                <div class="tags">
+                    <span class="tag">JS</span>
+                    <span class="tag">React</span>
+                </div>
+                <!-- Кнопка вызывает функцию и передает ID второго окна -->
+                <button class="changelog-btn" onclick="openChangelog('modal-second')">Ченджлог</button>
             </div>
         </div>
-        <!-- Кнопка перехода на вторую страницу -->
-<div class="projects-action">
-    <a href="page2.html" class="btn-more">Посмотреть все услуги</a>
-</div>
 
     </div>
-</section>
 
+    <a href="page2.html" class="my-button" >Наши проекты</a>
+
+
+    <!-- 2. Всплывающие окна (модалки) -->
+    <div id="modal-portfolio" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeChangelog('modal-portfolio')">&times;</span>
+            <h2>Ченджлог: Сайт-портфолио</h2>
+            <div class="changelog-text">
+                <p><strong>v1.0.1</strong> — Добавили подложку и разметку.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-second" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeChangelog('modal-second')">&times;</span>
+            <h2>Ченджлог: Второй проект</h2>
+            <div class="changelog-text">
+                <p><strong>v1.0.0</strong> — Релиз проекта.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3. Рабочий JavaScript-код -->
+    <script>
+        // Функция для открытия нужного окна
+        function openChangelog(id) {
+            var targetModal = document.getElementById(id);
+            if (targetModal) {
+                targetModal.style.display = "block";
+            }
+        }
+
+        // Функция для закрытия нужного окна
+        function closeChangelog(id) {
+            var targetModal = document.getElementById(id);
+            if (targetModal) {
+                targetModal.style.display = "none";
+            }
+        }
+
+        // Закрытие, если кликнули по темному фону вокруг окна
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+ </section>
+
+
+</body>
+</html>
     <div class="contacts-grid">
     
     <!-- Карточка 1: Обратная связь -->
@@ -198,6 +258,7 @@
         </div>
     </footer>
 
+
     <script>
         // Ищем все кнопки открытия модалок
         const openButtons = document.querySelectorAll('.open-modal-btn');
@@ -227,6 +288,26 @@
             if (closeBtn) closeBtn.addEventListener('click', closeModal);
             if (overlay) overlay.addEventListener('click', closeModal); // Закрыть при клике мимо окна
         });
+        <!-- Код скрипта вставляем сюда: -->
+
+            const modal = document.getElementById("changelogModal");
+            const openBtn = document.getElementById("openChangelogBtn");
+            const closeBtn = document.getElementById("closeChangelogBtn");
+
+            openBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+            closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+            window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+
     </script>
 
      
