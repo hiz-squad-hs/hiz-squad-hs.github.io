@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hizsquad — Главная</title>
-    <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/trailer.css">
 </head>
 <body>
-    <load src="blocks/header.html" />
-    <load src="blocks/hero.html" />
-    <load src="blocks/trailer.html" />
-    <load src="blocks/projects.html" />
-    <load src="blocks/feedback.html" />
-    <load src="blocks/footer.html" />
+    <load src="./blocks/header.html"/>
+    <load src="./blocks/hero.html" />
+    <load src="./blocks/trailer.html"/>
+    <load src="./blocks/projects.html" />
+    <load src="./blocks/feedback.html" />
+    <load src="./blocks/footer.html" />
+
 
     <script>
         // Ищем все кнопки открытия модалок
@@ -45,6 +45,26 @@
             if (closeBtn) closeBtn.addEventListener('click', closeModal);
             if (overlay) overlay.addEventListener('click', closeModal); // Закрыть при клике мимо окна
         });
+        <!-- Код скрипта вставляем сюда: -->
+
+            const modal = document.getElementById("changelogModal");
+            const openBtn = document.getElementById("openChangelogBtn");
+            const closeBtn = document.getElementById("closeChangelogBtn");
+
+            openBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+            closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+            window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+
     </script>
 
      

@@ -7,8 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "build:prod": "cross-env VITE_MAINTENANCE=false vite build",
-    "build:maintenance": "cross-env VITE_MAINTENANCE=true vite build"
-},
+    "build:maintenance": "cross-env VITE_MAINTENANCE=true vite build",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hizsquad/hizsite.git"

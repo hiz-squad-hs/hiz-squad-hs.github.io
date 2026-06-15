@@ -1,14 +1,19 @@
-import { defineConfig } from 'vite';
-import injectHTML from 'vite-plugin-html-inject';
-import { resolve } from 'path';
+import { defineConfig } from 'vite'
+import injectHTML from 'vite-plugin-html-inject'
+import { resolve } from 'path'
 
 export default defineConfig({
   base: '/hizsite/',
-  plugins: [injectHTML()],
+
+  plugins: [
+    injectHTML()
+  ],
+
   build: {
     outDir: 'docs',
     rollupOptions: {
       input: {
+        // Оставляем только полноценные страницы, блоки сюда писать НЕ надо
         main: resolve(__dirname, 'index.html'),
         notfound: resolve(__dirname, '404.html'),
         page2: resolve(__dirname, 'page2.html'),
@@ -16,7 +21,8 @@ export default defineConfig({
       }
     }
   },
+
   server: {
     allowedHosts: true
   }
-});
+})
