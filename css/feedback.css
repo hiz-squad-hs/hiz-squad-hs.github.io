@@ -63,4 +63,38 @@
     transform: translateY(-2px) !important;
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
+/* Выстраиваем кнопки ровно по центру в один ряд */
+.feedback-buttons {
+    display: flex;
+    justify-content: center; /* Центруем по горизонтали */
+    gap: 16px;               /* Расстояние между кнопками */
+    margin-top: 20px;
+    width: 100%;
+}
 
+/* Принудительно делаем кнопки одинаковыми */
+.btn-link {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+
+    /* ЖЕСТКО ЗАДАЕМ ОДИНАКОВУЮ ШИРИНУ ОБОИМ КНОПКАМ */
+    width: 140px;
+    box-sizing: border-box;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-link:hover {
+    background: #6366f1;
+    border-color: #6366f1;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
