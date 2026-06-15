@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="add40152-ba9c-4b52-87bb-c0ab82bedef1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/feedback.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/hero.html" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/hero.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/trailer.html" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/trailer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/feedback.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/feedback.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/services.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/services.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
