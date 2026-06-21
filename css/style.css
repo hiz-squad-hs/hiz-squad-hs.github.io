@@ -7,3 +7,9 @@
 @import 'maintenance.css';
 @import 'services.css';
 @import 'portfolio.css'; /* НАША НОВАЯ СТРОЧКА */
+
+/* Изменяет цвет для всего сайта */
+::selection {
+    background-color: #6366f1; /* Цвет фона (например, фиолетовый под ваш стиль) */
+    color: #ffffff;            /* Цвет самого текста при выделении */
+}
