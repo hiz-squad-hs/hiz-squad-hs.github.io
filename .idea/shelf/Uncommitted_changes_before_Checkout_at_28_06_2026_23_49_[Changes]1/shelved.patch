@@ -1,0 +1,36 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"ru\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Hizsquad — Главная</title>\r\n    <link rel=\"icon\" type=\"image/png\" href=\"https://i.ibb.co/7J3mrhsk/1.png\">\r\n    <link rel=\"stylesheet\" href=\"css/style.css\">\r\n    <link rel=\"stylesheet\" href=\"css/trailer.css\">\r\n</head>\r\n<body>\r\n    <load src=\"./blocks/header.html\"/>\r\n    <load src=\"./blocks/hero.html\" />\r\n    <load src=\"./blocks/trailer.html\"/>\r\n    <load src=\"./blocks/projects.html\" />\r\n    <load src=\"./blocks/feedback.html\" />\r\n    <load src=\"./blocks/footer.html\" />\r\n\r\n\r\n    <script>\r\n        // Ищем все кнопки открытия модалок\r\n        const openButtons = document.querySelectorAll('.open-modal-btn');\r\n        \r\n        openButtons.forEach(btn => {\r\n            btn.addEventListener('click', () => {\r\n                const modalId = btn.getAttribute('data-modal');\r\n                const targetModal = document.getElementById(modalId);\r\n                if (targetModal) {\r\n                    targetModal.style.display = 'flex'; // Показываем окно\r\n                    document.body.style.overflow = 'hidden'; // Запрещаем скролл сайта на фоне\r\n                }\r\n            });\r\n        });\r\n\r\n        // Находим все кнопки закрытия и оверлеи, чтобы прятать окно обратно\r\n        const modals = document.querySelectorAll('.portfolio-modal');\r\n        modals.forEach(modal => {\r\n            const closeBtn = modal.querySelector('.modal-close-btn');\r\n            const overlay = modal.querySelector('.modal-overlay');\r\n            \r\n            const closeModal = () => {\r\n                modal.style.display = 'none';\r\n                document.body.style.overflow = ''; // Возвращаем скролл сайту\r\n            };\r\n\r\n            if (closeBtn) closeBtn.addEventListener('click', closeModal);\r\n            if (overlay) overlay.addEventListener('click', closeModal); // Закрыть при клике мимо окна\r\n        });\r\n        <!-- Код скрипта вставляем сюда: -->\r\n\r\n            const modal = document.getElementById(\"changelogModal\");\r\n            const openBtn = document.getElementById(\"openChangelogBtn\");\r\n            const closeBtn = document.getElementById(\"closeChangelogBtn\");\r\n\r\n            openBtn.onclick = function() {\r\n            modal.style.display = \"block\";\r\n        }\r\n\r\n            closeBtn.onclick = function() {\r\n            modal.style.display = \"none\";\r\n        }\r\n\r\n            window.onclick = function(event) {\r\n            if (event.target == modal) {\r\n            modal.style.display = \"none\";\r\n        }\r\n        }\r\n        // Функция для открытия нужного окна\r\n        function openChangelog(id) {\r\n            var targetModal = document.getElementById(id);\r\n            if (targetModal) {\r\n                targetModal.style.display = \"block\";\r\n\r\n                // БЛОКИРУЕМ СКРОЛЛ САЙТА ПРИ ОТКРЫТИИ\r\n                document.body.classList.add('no-scroll');\r\n            }\r\n        }\r\n\r\n        // Функция для закрытия нужного окна\r\n        function closeChangelog(id) {\r\n            var targetModal = document.getElementById(id);\r\n            if (targetModal) {\r\n                targetModal.style.display = \"none\";\r\n\r\n                // ВОЗВРАЩАЕМ СКРОЛЛ САЙТА ПРИ ЗАКРЫТИИ\r\n                document.body.classList.remove('no-scroll');\r\n            }\r\n        }\r\n\r\n        // Закрытие, если кликнули по темному фону вокруг окна\r\n        window.onclick = function(event) {\r\n            if (event.target.classList.contains('modal')) {\r\n                event.target.style.display = \"none\";\r\n\r\n                // ТОЖЕ ВОЗВРАЩАЕМ СКРОЛЛ, ЕСЛИ КЛИКНУЛИ МИМО ОКНА\r\n                document.body.classList.remove('no-scroll');\r\n            }\r\n        }\r\n\r\n    </script>\r\n\r\n     \r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 3f802223a4e603a6f256653dd4cd2d764fe5b5f8)
++++ b/index.html	(date 1782672525027)
+@@ -20,7 +20,7 @@
+     <script>
+         // Ищем все кнопки открытия модалок
+         const openButtons = document.querySelectorAll('.open-modal-btn');
+-        
++
+         openButtons.forEach(btn => {
+             btn.addEventListener('click', () => {
+                 const modalId = btn.getAttribute('data-modal');
+@@ -37,7 +37,7 @@
+         modals.forEach(modal => {
+             const closeBtn = modal.querySelector('.modal-close-btn');
+             const overlay = modal.querySelector('.modal-overlay');
+-            
++
+             const closeModal = () => {
+                 modal.style.display = 'none';
+                 document.body.style.overflow = ''; // Возвращаем скролл сайту
+@@ -99,6 +99,6 @@
+ 
+     </script>
+ 
+-     
++
+ </body>
+ </html>
