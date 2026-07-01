@@ -5,16 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="add40152-ba9c-4b52-87bb-c0ab82bedef1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/STRUCTURE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/Cards-for-3-pages/hs-Site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/portfolio-grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/hs-Site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/projects/site-hs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/feedback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/portfolio-cases.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/feedback.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/feedback.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/portfolio.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/portfolio.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -35,6 +49,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.index.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -42,7 +57,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "24.18.0",
     "javascript.nodejs.core.library.typings.version": "24.13.2",
@@ -60,6 +75,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hiz\site\" />
       <recent name="C:\Users\hiz\site\png" />
       <recent name="C:\Users\hiz\site" />
     </key>
