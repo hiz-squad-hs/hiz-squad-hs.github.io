@@ -1,45 +1,21 @@
 <div class="contacts-grid">
-    
+
     <!-- Карточка 1: Обратная связь -->
     <div class="contacts-group">
         <h3>Обратная связь</h3>
-        <div class="feedback-links">
-            <div class="feedback-buttons">
-            <a href="https://t.me/hizsquad" class="telegram" target="_blank">Telegram</a>
-
-            <!-- ДОБАВИЛИ ПОЧТУ (Она встанет рядом с Телегой) -->
-                <button class="btn-link" onclick="openChangelog('modal-email')">Email</button>
-
-
-            <!-- <a href="404.html" class="telegram" target="_blank">Telegram</a> -->
-
-            </div>
+        <div class="buttons-flex">
+            <a href="https://t.me" target="_blank" class="btn-contact">Telegram</a>
+            <a href="mailto:твой_email" class="btn-contact">Email</a>
         </div>
     </div>
 
     <!-- Карточка 2: Профили -->
-    <div class="contacts-group" id="feedback"> 
+    <div class="contacts-group" id="feedback">
         <h3>Мои профили</h3>
-        <div class="feedback-links">
-            <a href="https://github.com/hizsquad" target="_blank">GitHub</a>
-
-            <a href="https://t.me/hizsquad911" class="telegram" target="_blank">Telegram</a>
-
-
-
-            <!-- ДОБАВИЛИ ДИСКОРД (Он встанет рядом с Гитхабом) -->
-            <!-- <a href="404.html" class="discord" target="_blank">Discord</a> -->
+        <div class="buttons-flex">
+            <a href="https://github.com" target="_blank" class="btn-contact">GitHub</a>
+            <a href="https://t.me" target="_blank" class="btn-contact">Telegram</a>
         </div>
     </div>
-    <!-- Окно для почты закидываем в самый низ страницы (ЭТО HTML) -->
-    <div id="modal-email" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeChangelog('modal-email')">&times;</span>
-            <h2>Связаться по почте</h2>
-            <div class="changelog-text">
-                <p>Мой рабочий Email для связи и предложений:</p>
-                <p><strong>hizsquad@gmail.com</strong></p>
-            </div>
-        </div>
-    </div>
+
 </div>

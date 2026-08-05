@@ -1,5 +1,4 @@
 /* Подключаем все файлы стилей в один */
-@import 'base.css';
 @import 'hero.css';
 @import 'projects.css';
 @import 'feedback.css';
@@ -8,8 +7,15 @@
 @import 'services.css';
 @import 'portfolio.css'; /* НАША НОВАЯ СТРОЧКА */
 @import 'hs-Site.css';
+@import 'developers.css';
 /* Изменяет цвет для всего сайта */
-::selection {
-    background-color: #6366f1; /* Цвет фона (например, фиолетовый под ваш стиль) */
-    color: #ffffff;            /* Цвет самого текста при выделении */
+body {
+    /* Создает круглый градиент из самого центра экрана */
+        background: radial-gradient(circle at center, #6366f1 0%, #000000 125%) !important;/* цвета первый тот что в центе второй то что с краёв
+    color: #c9d1d9; /* Светло-серый текст, чтобы глаза не уставали */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 60px 20px;
 }

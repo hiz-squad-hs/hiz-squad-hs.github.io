@@ -1,19 +1,22 @@
-.footer {
-    padding: 40px 10%;
+/* Стили для подвала сайта (footer) */
+footer, .footer-block {
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    color: #7c3aed;
-    font-size: 0.85rem;
+    margin-top: 50px;
+    padding: 20px 0;
+    width: 100%;
 }
-/* Стили для твоего сокращения-автографа */
-.footer-signature {
-    font-family: 'Courier New', Courier, monospace; /* Консольный стиль */
-    font-size: 16px;
-    font-weight: 700;
-    color: #7c3aed; /* Твой фирменный синий неон */
-    letter-spacing: 2px;
-    text-transform: uppercase;
+
+footer p, .footer-block p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4); /* Полупрозрачный белый, чтобы не отвлекал */
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Версия сайта (v0.4.0) */
+footer .version, .footer-block .version {
     display: inline-block;
-    margin-top: 10px; /* Отодвигаем от верхней строчки */
-    opacity: 0.9;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.25);
+    margin-top: 5px;
 }

@@ -11,8 +11,7 @@
 <body>
     <load src="./blocks/header.html"/>
     <load src="./blocks/hero.html" />
-    <load src="./blocks/trailer.html"/>
-    <load src="./blocks/projects.html" />
+    <load src="./blocks/developers.html" />
     <load src="./blocks/feedback.html" />
     <load src="./blocks/footer.html" />
 
@@ -21,7 +20,7 @@
     <script>
         // Ищем все кнопки открытия модалок
         const openButtons = document.querySelectorAll('.open-modal-btn');
-        
+
         openButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const modalId = btn.getAttribute('data-modal');
@@ -38,7 +37,7 @@
         modals.forEach(modal => {
             const closeBtn = modal.querySelector('.modal-close-btn');
             const overlay = modal.querySelector('.modal-overlay');
-            
+
             const closeModal = () => {
                 modal.style.display = 'none';
                 document.body.style.overflow = ''; // Возвращаем скролл сайту
@@ -100,6 +99,6 @@
 
     </script>
 
-     
+
 </body>
 </html>
