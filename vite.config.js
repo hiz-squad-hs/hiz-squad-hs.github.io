@@ -10,7 +10,7 @@ export default defineConfig({
   // НАСТРОЙКА IP И ПОРТА ТУТ:
   server: {
     host: '127.0.0.1', // Ваш IP (или 'localhost', или '0.0.0.0' если для локальной сети)
-    port: 3000         // Ваш фиксированный порт
+    port: 3001         // Ваш фиксированный порт
   },
   build: {
     outDir: 'docs',

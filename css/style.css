@@ -11,8 +11,8 @@
 /* Изменяет цвет для всего сайта */
 body {
     /* Создает круглый градиент из самого центра экрана */
-        background: radial-gradient(circle at center, #6366f1 0%, #000000 125%) !important;/* цвета первый тот что в центе второй то что с краёв
-    color: #c9d1d9; /* Светло-серый текст, чтобы глаза не уставали */
+    background: #101010;
+    color: #c9d1d9;
     display: flex;
     flex-direction: column;
     align-items: center;
