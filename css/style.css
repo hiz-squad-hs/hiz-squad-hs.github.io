@@ -10,7 +10,7 @@
 @import 'developers.css';
 /* Изменяет цвет для всего сайта */
 body {
-    /* Создает круглый градиент из самого центра экрана */
+    /* Цвет фона */
     background: #101010;
     color: #c9d1d9;
     display: flex;
@@ -18,4 +18,16 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 60px 20px;
+}
+/* Цвет выделения текста */
+/* Для всего сайта */
+::selection {
+    background-color: #6366f1; /* Цвет фона при выделении */
+    color: #ffffff;            /* Цвет текста при выделении */
+}
+
+/* Для браузеров на движке Firefox */
+::-moz-selection {
+    background-color: #6366f1;
+    color: #ffffff;
 }
