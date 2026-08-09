@@ -1,12 +1,21 @@
-body {
-  background-color: #101010;
+html, body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center; /* Это красиво отцентрирует карточку еще и по вертикали */
-  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Намертво убирает скроллбар и запрещает мотать страницу */
+  box-sizing: border-box;
 }
+
+/* Центрируем карточку 404 ровно по центру экрана */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #101010; /* Твой глубокий черный */
+}
+
 /* Контейнер в стиле вашей плашки обратной связи */
 .git-error-container {
   max-width: 500px;
