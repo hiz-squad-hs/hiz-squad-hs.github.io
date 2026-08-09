@@ -1,14 +1,12 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import injectHTML from 'vite-plugin-html-inject'
 
+// В файле vite.config.js
 export default defineConfig({
-  // Название твоего репозитория на GitHub, обернутое в слэши.
-  base: '/hiz-squad-web-site/',
+  // Теперь Vite будет собирать все пути строго от корня домена, без подпапок!
+  base: '/',
 
-  plugins: [
-    injectHTML() // Этот бро как раз отвечает за то, чтобы контент появился
-  ],
+  // Весь остальной твой конфиг (server, build) остается без изменений...
 
   server: {
     host: '127.0.0.1',
