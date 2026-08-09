@@ -1,67 +1,132 @@
-/* Главная карточка разработчика */
-.team-card {
-    position: relative;
-    width: 280px;               /* Сделали карточку шире */
-    padding: 40px 30px;         /* Увеличили внутренние отступы */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    overflow: hidden;           /* Прячет кнопку, пока она внизу за границей */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Базовый сброс стилей для секции */
+.developers-section * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* 1. Эффект для САМОЙ КАРТОЧКИ при наведении */
-.team-card:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: #4636ff;     /* Твой фиолетовый цвет обводки */
-    box-shadow: 0 15px 30px rgba(70, 54, 255, 0.15);
+/* Общий контейнер секции */
+.developers-section {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: sans-serif;
 }
 
-/* 2. И одновременно зажигается аватарка внутри */
-.team-card:hover .avatar-wrapper {
-    border-color: #4636ff;     /* Фиолетовый ободок у круга */
-    box-shadow: 0 0 20px rgba(70, 54, 255, 0.6); /* Мощное фиолетовое свечение */
+/* Заголовок страницы */
+.developers-section h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
-/* Круглая обертка аватарки */
+/* Флекс-сетка для размещения 4 карточек в ряд */
+.developers-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Стили карточки разработчика */
+.developer-card {
+  background: #121214;
+  border: 1px solid #27272a;
+  border-radius: 20px;
+  /* Большой нижний отступ (85px) бронирует фиксированное место под кнопку */
+  padding: 35px 20px 85px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  /* Точный расчет под 4 карточки в ряд с учетом зазоров */
+  width: calc(25% - 15px);
+  min-width: 250px; /* Защита от сжатия контента на маленьких экранах */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Эффекты для всей карточки при наведении */
+.developer-card:hover {
+  transform: translateY(-5px);
+  border-color: #6366f1;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.4); /* Внешнее неоновое свечение */
+}
+
+/* Контейнер аватарки */
 .avatar-wrapper {
-    width: 140px;               /* Увеличили размер круга (было 110px) */
-    height: 140px;              /* Увеличили размер круга (было 110px) */
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 25px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;  /* Чтобы свечение зажигалось плавно */
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 25px;
+  background: #000;
+  /* Изначально рамка полностью прозрачная (не светится) */
+  border: 4px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
-/* Если внутри аватарки «hiz» написан текстом, сделаем его тоже крупнее */
-.avatar-wrapper span,
-.avatar-wrapper p {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #ffffff;
+/* Включение рамки вокруг аватарки при наведении на карточку */
+.developer-card:hover .avatar-wrapper {
+  border-color: #6366f1;
 }
 
-/* Стили для текста под аватаркой */
-.team-card .name {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 8px;
+/* Стилизация самого изображения внутри круга */
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.team-card .role {
-    font-size: 1rem;
-    color: #94a3b8;
-    margin: 0;
+/* Текстовые стили */
+.developer-card h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.developer-card .name {
+  color: #a1a1aa;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.developer-card .role {
+  color: #6366f1;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* Выезжающая кнопка «Связаться» */
+.contact-btn {
+  background: #6366f1;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  width: 85%;
+  text-align: center;
+
+  /* Изначально кнопка спрятана на самом дне и прозрачна */
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+
+/* Анимация появления кнопки при ховере карточки */
+.developer-card:hover .contact-btn {
+  bottom: 25px; /* Поднимается в заготовленную пустую область паддинга */
+  opacity: 1; /* Становится видимой */
+}
+
+/* Ховер на саму кнопку */
+.contact-btn:hover {
+  background: #6366f1;
 }
