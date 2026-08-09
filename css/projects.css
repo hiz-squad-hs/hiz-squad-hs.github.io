@@ -1,179 +1,173 @@
-/* ==========================================================================
-   ИСПРАВЛЕННАЯ ПОДЛОЖКА (БОЛЬШОЙ ТЕМНЫЙ БЛОК)
-   ========================================================================== */
-.projects-container {
-    background-color: #11111f; /* Темный цвет подложки */
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 30px;
-
-    /* Отключаем кривой flex, который сжимал карты в кашу */
-    display: block;
-
-    /* Растягиваем на всю ширину родительского контейнера */
+/* Шапка страницы */
+.projects-header {
     width: 100%;
-    max-width: 100%; /* Убираем любые ограничения по ширине */
-    box-sizing: border-box;
-
-    margin: 30px auto; /* Отступы сверху и снизу */
-}
-
-/* ==========================================================================
-   ИСПРАВЛЕННЫЕ КАРТОЧКИ (ВНУТРИ ПОДЛОЖКИ)
-   ========================================================================== */
-.project-card {
-    background-color: #16162a; /* Чуть светлее подложки */
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
-    padding: 24px;
-
-    /* Растягиваем карточку во всю ширь подложки */
-    width: 100%;
-    box-sizing: border-box;
-
-    /* Делаем отступ между первой и второй карточкой */
-    margin-bottom: 20px;
-}
-
-/* Чтобы у последней карточки не было лишнего отступа снизу */
-.project-card:last-child {
-    margin-bottom: 0;
-}
-
-/* ==========================================================================
-   ФУТЕР КАРТОЧКИ (ТЕГИ И КНОПКА РОК-Н-РОЛЛ)
-   ========================================================================== */
-.card-footer {
+    max-width: 1200px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: space-between; /* Теги влево, кнопка вправо */
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.tags {
-    display: flex;
-    gap: 8px; /* Расстояние между плашками HTML CSS Git */
+.projects-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
-.tag {
-    background: rgba(255, 255, 255, 0.06);
+.projects-header p {
     color: #94a3b8;
-    padding: 5px 12px;
-    border-radius: 6px;
-    font-size: 13px;
+    font-size: 1.05rem;
+    margin: 0;
 }
 
-.changelog-btn {
-    background: rgba(255, 255, 255, 0.04);
-    color: #a0a0b0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 6px 14px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.changelog-btn:hover {
-    background: #7c3aed; /* Фиолетовый цвет как на сайте */
-    color: #ffffff;
-    border-color: #a855f7;
-}
-
-/* ==========================================================================
-   СТИЛИ ДЛЯ ОКНА (МОДАЛКИ)
-   ========================================================================== */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    background-color: #0f0f1e;
-    color: #ffffff;
-    margin: 10% auto; /* Немного уменьшили отступ сверху, чтобы окно поднялось */
-    padding: 30px;
+/* Кнопка возврата «На главную» в виде современной плашки со стрелкой */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    width: 90%;
-    max-width: 500px;
-    border-radius: 14px;
-    position: relative;
-
-    /* ======================================================== */
-    /* ДОБАВЬТЕ ЭТИ СТРОКИ, ЧТОБЫ ПОЯВИЛСЯ СКРОЛЛ ВНУТРИ ОКНА:   */
-    /* ======================================================== */
-    max-height: 70vh;          /* Окно займет максимум 70% от высоты экрана */
-    overflow-y: auto;          /* Появится скролл, если текст не влезает */
-    padding-right: 15px;       /* Отступ справа, чтобы текст не лип к скроллбару */
-}
-
-
-.close-btn {
-    color: #64748b;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 26px;
-    cursor: pointer;
-}
-.close-btn:hover { color: #fff; }
-.changelog-text p { font-size: 14px; color: #cbd5e1; }
-.changelog-text strong { color: #6366f1; }
-/* Плавный переход для подложки и карточек (добавьте это, если их не было) */
-.projects-container, .project-card {
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* 1. НЕОН ДЛЯ БОЛЬШОЙ ПОДЛОЖКИ ПРИ НАВЕДЕНИИ */
-.projects-container:hover {
-    border-color: #7c3aed; /* Меняем цвет рамки на фиолетовый */
-    box-shadow: 0 0 25px #a855f7; /* Мягкое фиолетовое свечение вокруг */
-}
-
-/* 2. НЕОН ДЛЯ КАЖДОЙ КАРТОЧКИ ПРИ НАВЕДЕНИИ */
-.project-card:hover {
-    border-color: #7c3aed; /* Рамка карточки становится ярче */
-    box-shadow: 0 0 20px #a855f7; /* Плотный неон вокруг карточки */
-    background-color: #1a1a32; /* Чуть-чуть подсвечиваем сам фон карточки */
-}
-/* Оранжево-желтый неон для статуса "В разработке" */
-.status{
-    color: #ff9f43;
-    text-shadow: 0 0 10px rgba(255, 159, 67, 0.4);
-}
-
-/* Зеленый неон для статуса "Готово" */
-.status-2 {
-    color: #10ac84;
-    text-shadow: 0 0 10px rgba(16, 172, 132, 0.4);
-}
-.my-button {
-    background: #7c3aed;
-    display: flex;
-    justify-content: center; /* Выравнивает по горизонтали (влево-вправо) */
-    padding: 16px 36px;     /* Выравнивает по вертикали (верх-низ), если у блока есть высота */
-    width: 100%;
-    color: #ffffff;
+    color: #94a3b8;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 16px;
     border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(47, 128, 237, 0.3);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* Этот класс убирает прокрутку у всего сайта */
-body.no-scroll {
+
+.btn-back svg {
+    transition: transform 0.2s ease;
+}
+
+.btn-back:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-back:hover svg {
+    transform: translateX(-3px); /* Стрелка слегка дергается влево */
+}
+
+/* Сетка карточек */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Стили карточки */
+.project-card {
+    background: #151922;
+    border: 1px solid #222936;
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
     overflow: hidden;
+}
+
+/* Неоновое свечение при наведении на рабочую карточку */
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
+}
+
+/* Контентная часть внутри карточки */
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.card-content p {
+    margin: 0 0 24px 0;
+    color: #94a3b8;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+/* Базовые стили плашки статуса */
+.card-status {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* Зеленый активный статус */
+.status-active {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+/* Серый статус для разработки */
+.status-disabled {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #64748b;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Базовые стили для кнопок */
+.btn-project {
+    display: block;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Стиль синей активной кнопки */
+.btn-active-view {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.btn-active-view:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-active-view:active {
+    transform: scale(0.98);
+}
+
+/* Стиль заблокированной кнопки */
+.btn-disabled-view {
+    background-color: rgba(255, 255, 255, 0.02);
+    color: #475569;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    cursor: not-allowed;
 }
