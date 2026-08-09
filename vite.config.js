@@ -1,12 +1,20 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import injectHTML from 'vite-plugin-html-inject'
 
-// В файле vite.config.js
 export default defineConfig({
-  // Теперь Vite будет собирать все пути строго от корня домена, без подпапок!
+  // Проект теперь в корне домена, base строго '/'
   base: '/',
 
-  // Весь остальной твой конфиг (server, build) остается без изменений...
+  plugins: [
+    injectHTML({
+      // Указываем плагину искать блоки строго внутри корня проекта,
+      // чтобы он перестал генерировать абсолютные пути винды file:///
+      handler: {
+        root: resolve(__dirname)
+      }
+    })
+  ],
 
   server: {
     host: '127.0.0.1',
