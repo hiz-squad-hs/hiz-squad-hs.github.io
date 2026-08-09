@@ -1,16 +1,14 @@
 import { defineConfig } from 'vite'
-import injectHTML from 'vite-plugin-html-inject'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: './',
-  plugins: [
-    injectHTML()
-  ],
-  // НАСТРОЙКА IP И ПОРТА ТУТ:
+  // Название твоего репозитория на GitHub, обернутое в слэши.
+  // Именно эта строчка заставит Vite автоматически перестроить ВСЕ пути при сборке!
+  base: '/hiz-squad-web-site/',
+
   server: {
-    host: '127.0.0.1', // Ваш IP (или 'localhost', или '0.0.0.0' если для локальной сети)
-    port: 3001         // Ваш фиксированный порт
+    host: '127.0.0.1',
+    port: 3001
   },
   build: {
     outDir: 'docs',
@@ -18,8 +16,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         notfound: resolve(__dirname, '404.html'),
-        page2: resolve(__dirname, 'page2.html'),
-        portfolio: resolve(__dirname, 'portfolio.html')
+        projects: resolve(__dirname, 'pages/projects.html')
       }
     }
   }
