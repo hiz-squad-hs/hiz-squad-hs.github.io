@@ -3,11 +3,6 @@
 @import 'hero.css';
 @import 'projects.css';
 @import 'feedback.css';
-@import 'page2.css';
-@import 'maintenance.css';
-@import 'services.css';
-@import 'portfolio.css'; /* НАША НОВАЯ СТРОЧКА */
-@import 'hs-Site.css';
 @import 'developers.css';
 /* Изменяет цвет для всего сайта */
 body {
