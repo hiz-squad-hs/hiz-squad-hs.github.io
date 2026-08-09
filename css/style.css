@@ -1,4 +1,5 @@
 /* Подключаем все файлы стилей в один */
+@import 'header.css';
 @import 'hero.css';
 @import 'projects.css';
 @import 'feedback.css';
