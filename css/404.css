@@ -1,78 +1,83 @@
-/* Общие настройки фона в стиле hizsquad */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #0b0813; /* Глубокий темный фон */
-    color: #ffffff;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
+  background-color: #101010;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center; /* Это красиво отцентрирует карточку еще и по вертикали */
+  justify-content: center;
+}
+/* Контейнер в стиле вашей плашки обратной связи */
+.git-error-container {
+  max-width: 500px;
+  width: 90%;
+  margin: 120px auto;
+  padding: 40px 30px;
+  background: #0d0d12; /* Ваш темный фон */
+  border: 1px solid #252538; /* Тонкая рамка */
+  border-radius: 16px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace; /* Программистский шрифт */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Контейнер по центру */
-.error-container {
-    text-align: center;
-    padding: 20px;
-    max-width: 500px;
-    width: 100%;
+/* Мелкий статус сверху */
+.git-status {
+  font-size: 0.9rem;
+  color: #ff5555; /* Красный цвет ошибки */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
-/* Огромная светящаяся 404 */
-.error-code {
-    font-size: 120px;
-    margin: 0;
-    font-weight: 900;
-    color: #a855f7; /* Твой фирменный фиолетовый */
-    text-shadow: 0 0 20px rgba(168, 85, 247, 0.6),
-                 0 0 40px rgba(168, 85, 247, 0.4);
-    animation: pulse 3s infinite alternate;
+/* Фирменные неоновые цифры */
+.git-title {
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: #6366f1;
+  margin: 0 0 15px 0;
+  text-shadow: 0 0 25px rgba(93, 93, 255, 0.35);
 }
 
-/* Заголовки и тексты */
-.error-title {
-    font-size: 24px;
-    margin: 20px 0 10px;
-    color: #ffffff;
+/* Описание ошибки */
+.git-desc {
+  font-size: 1rem;
+  color: #8a8a9e; /* Приглушенный текст */
+  line-height: 1.6;
+  margin: 0 0 35px 0;
 }
 
-.error-text {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.5;
-    margin-bottom: 30px;
+/* Подсветка имени ветки */
+.branch-name {
+  color: #6366f1;
+  background: rgba(93, 93, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
-/* Фиолетовая кнопка из твоей верстки */
-.back-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #a855f7;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+/* Ваша фирменная капсульная кнопка */
+.git-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #6366f1;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px; /* Капсула */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(93, 93, 255, 0.2);
 }
 
-/* Эффект при наведении на кнопку */
-.back-button:hover {
-    background-color: #9333ea;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
+/* Префикс доллара перед командой */
+.command-prefix {
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 5px;
 }
 
-/* Плавная анимация свечения */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
-    }
-    100% {
-        transform: scale(1.03);
-        text-shadow: 0 0 35px rgba(168, 85, 247, 0.9);
-    }
+/* Эффекты при наведении */
+.git-btn:hover {
+  background: #4b4bdf;
+  box-shadow: 0 0 20px rgba(93, 93, 255, 0.6);
+  transform: translateY(-2px);
 }
