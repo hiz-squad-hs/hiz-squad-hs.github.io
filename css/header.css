@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  font-family: 'Monaspace Krypton', monospace !important;
+}
+
 /* Сам овальный остров */
 .site-header {
     position: fixed;

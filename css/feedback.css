@@ -24,7 +24,7 @@
 }
 .contacts-group:hover {
     background: rgba(255, 255, 255, 0.08) !important;
-    border-color: #6366f1 !important; /* Оранжевый ховер */
+    border-color: #aaaaaa !important; /* Оранжевый ховер */
     transform: translateY(-1px);
 }
 
@@ -62,7 +62,7 @@
 
 .btn-contact:hover {
     background: rgba(255, 255, 255, 0.08) !important;
-    border-color: #6366f1 !important; /* Оранжевый ховер */
+    border-color: #aaaaaa !important; /* Оранжевый ховер */
     transform: translateY(-1px);
 }
 

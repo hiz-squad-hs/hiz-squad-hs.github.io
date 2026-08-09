@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  font-family: 'Monaspace Krypton', monospace !important;
+}
+
 /* Базовый сброс стилей для секции */
 .developers-section * {
   box-sizing: border-box;

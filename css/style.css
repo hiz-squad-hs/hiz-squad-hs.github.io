@@ -46,18 +46,20 @@ body {
   font-display: swap;
 }
 
-/* Применяем ко всему сайту */
+/* Принудительно задаем шрифт абсолютно для всех тегов на странице */
+*, *::before, *::after {
+  font-family: 'Monaspace Krypton', monospace !important;
+}
+
+/* Оставляем базовые настройки экрана для html и body */
 html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* Твой зафиксированный скролл */
+  overflow: hidden;
   box-sizing: border-box;
-  background-color: #101010; /* Фирменный черный */
-
-  /* Включаем гитхабовский Криптон */
-  font-family: 'Monaspace Krypton', monospace;
+  background-color: #101010;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
