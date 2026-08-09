@@ -26,7 +26,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         notfound: resolve(__dirname, '404.html'),
-        projects: resolve(__dirname, 'pages/projects.html')
+        projects: resolve(__dirname, 'pages/projects.html'),
+        developers: resolve(__dirname, 'pages/developers.html'),
       }
     }
   }
