@@ -28,14 +28,13 @@ body {
     background-color: #aaaaaa;
     color: #ffffff;
 }
-/* Подключаем обычный начертание Monaspace Krypton */
 @font-face {
   font-family: 'Monaspace Krypton';
-  src: url('/fonts/MonaspaceKrypton-Regular.woff2') format('woff2');
+  src: url('../fonts/MonaspaceKrypton-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
+
 
 /* Подключаем жирный Monaspace Krypton для заголовков */
 @font-face {
