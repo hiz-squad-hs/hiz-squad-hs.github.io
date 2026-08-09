@@ -1,173 +1,94 @@
-/* Шапка страницы */
-.projects-header {
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.projects-header h1 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin: 0;
-    color: #ffffff;
-    letter-spacing: -0.5px;
-}
-
-.projects-header p {
-    color: #94a3b8;
-    font-size: 1.05rem;
-    margin: 0;
-}
-
-/* Кнопка возврата «На главную» в виде современной плашки со стрелкой */
-.btn-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    align-self: flex-start;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #94a3b8;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-back svg {
-    transition: transform 0.2s ease;
-}
-
-.btn-back:hover {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.btn-back:hover svg {
-    transform: translateX(-3px); /* Стрелка слегка дергается влево */
-}
-
-/* Сетка карточек */
+/* Главный контейнер сетки */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
-    width: 100%;
-    max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;            /* Разрешаем перенос на новый ряд */
+  justify-content: flex-start;/* Четвертая карточка строго слева, под первой */
+  gap: 30px;                  /* Хороший отступ между большими карточками */
+  max-width: 1200px;          /* Четкий лимит: (360px * 3) + отступы = как раз 3 в ряд */
+  margin: 40px auto 0 auto;   /* Сама сетка строго по центру экрана */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* Стили карточки */
+/* Расширенные стили для карточек */
 .project-card {
-    background: #151922;
-    border: 1px solid #222936;
-    border-radius: 16px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 260px;
-    box-sizing: border-box;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
+  background-color: #101010;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  width: 360px;               /* Сделали шире (было 280-300px) */
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Неоновое свечение при наведении на рабочую карточку */
 .project-card:hover {
-    transform: translateY(-4px);
-    border-color: #3b82f6;
-    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
+  transform: translateY(-4px); /* Легкий подъем карточки вверх */
+  border-color: rgba(255, 255, 255, 0.4); /* Рамка становится отчетливее */
+
+  /* Эффект неонового контура: мягкий свет снаружи и легкий подсвет внутри */
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.15),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
-/* Контентная часть внутри карточки */
-.card-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
 
+/* Текстовый контент внутри карточки */
 .card-content h3 {
-    margin: 0 0 12px 0;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ffffff;
+  margin: 15px 0 10px 0;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .card-content p {
-    margin: 0 0 24px 0;
-    color: #94a3b8;
-    font-size: 0.98rem;
-    line-height: 1.6;
+  color: #aaaaaa;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
 }
 
-/* Базовые стили плашки статуса */
-.card-status {
-    display: inline-block;
-    align-self: flex-start;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 6px;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-}
-
-/* Зеленый активный статус */
-.status-active {
-    background-color: rgba(16, 185, 129, 0.1);
-    color: #10b981;
-    border: 1px solid rgba(16, 185, 129, 0.25);
-}
-
-/* Серый статус для разработки */
-.status-disabled {
-    background-color: rgba(255, 255, 255, 0.04);
-    color: #64748b;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Базовые стили для кнопок */
+/* Базовый класс для кнопок-ссылок */
 .btn-project {
-    display: block;
-    text-align: center;
-    padding: 12px 24px;
-    border-radius: 10px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: auto;
-    transition: all 0.2s ease;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;             /* Растягиваем кнопку на всю ширину карточки */
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
-/* Стиль синей активной кнопки */
+/* АКТИВНЫЕ КНОПКИ («Подробнее») */
 .btn-active-view {
-    background-color: #2563eb;
-    color: #ffffff;
-    border: 1px solid transparent;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/* Эффект свечения ТОЛЬКО при наведении */
 .btn-active-view:hover {
-    background-color: #1d4ed8;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  background-color: #ffffff;
+  color: #101010; /* Твой фирменный глубокий черный */
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Белое неоновое свечение */
+  transform: translateY(-2px);
 }
 
-.btn-active-view:active {
-    transform: scale(0.98);
-}
-
-/* Стиль заблокированной кнопки */
+/* ЗАБЛОКИРОВАННАЯ КНОПКА («Недоступно») */
 .btn-disabled-view {
-    background-color: rgba(255, 255, 255, 0.02);
-    color: #475569;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    pointer-events: none;
-    cursor: not-allowed;
+  background-color: #111111;
+  color: #444444;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  cursor: not-allowed;
+}
+
+.btn-disabled-view:hover {
+  transform: none;
+  box-shadow: none;
 }
