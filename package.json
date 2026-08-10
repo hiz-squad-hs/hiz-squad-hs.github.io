@@ -8,7 +8,8 @@
     "build": "vite build",
     "build:prod": "cross-env VITE_MAINTENANCE=false vite build",
     "build:maintenance": "cross-env VITE_MAINTENANCE=true vite build",
-    "deploy": "npm run build && gh-pages -d dist"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d docs"
   },
   "repository": {
     "type": "git",
