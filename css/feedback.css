@@ -2,9 +2,10 @@
 .contacts-grid {
     display: flex;
     gap: 24px;
-    max-width: 900px;
-    width: 100%;
-    margin: 40px auto 0 auto;
+    /* Вместо max-width: 900px ставим фиксированную аккуратную ширину */
+    width: 450px;
+    max-width: 100%;          /* Чтобы не ломалось на телефонах */
+    margin: 40px auto 0 auto; /* Ровно центрирует по горизонтали */
     justify-content: center;
 }
 
