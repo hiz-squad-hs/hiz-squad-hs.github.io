@@ -3,13 +3,11 @@ import { resolve } from 'path'
 import injectHTML from 'vite-plugin-html-inject'
 
 export default defineConfig({
-  // Проект теперь в корне домена, base строго '/'
-  base: '/',
+  // АВТОМАТИКА: если собираем для сайта — ставим имя репа, если запускаем локально — оставляем '/'
+  base: process.env.NODE_ENV === 'production' ? '/hiz-squad-hs.github.io/' : '/',
 
   plugins: [
     injectHTML({
-      // Указываем плагину искать блоки строго внутри корня проекта,
-      // чтобы он перестал генерировать абсолютные пути винды file:///
       handler: {
         root: resolve(__dirname)
       }
@@ -20,6 +18,7 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 3001
   },
+
   build: {
     outDir: 'docs',
     rollupOptions: {
@@ -28,6 +27,9 @@ export default defineConfig({
         notfound: resolve(__dirname, '404.html'),
         projects: resolve(__dirname, 'pages/projects.html'),
         developers: resolve(__dirname, 'pages/developers.html'),
+
+        // Твоя страница проекта, которую Rollup обязан скомпилировать
+        proj1: resolve(__dirname, 'pages/projects/proj1.html')
       }
     }
   }

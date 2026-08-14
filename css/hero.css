@@ -1,23 +1,27 @@
 .hero-section {
     display: flex;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;    /* Центрирует элементы по горизонтали */
+        text-align: center;     /* Железно центрирует сам текст внутри строк */
+        width: 100%;
 }
-
 .title {
     color: #6366f1;
     font-size: 3.5rem;
-
-    /* 70px хедера + 130px воздуха под ним. Меняй вторую цифру, чтобы двигать ниже/выше */
     margin-top: calc(70px + 130px);
     font-weight: 800;
+
+    /* ДОБАВЬ ЭТИ ДВЕ СТРОЧКИ: */
+    width: 100%;
+    text-align: center;
 }
 
 .subtitle {
     font-size: 1.2rem;
     color: #94a3b8;
     max-width: 600px;
-    margin: 20px 0 35px 0;
     text-align: center;
-    margin: 20px auto 35px auto; /* auto по бокам центрирует сам блок */
 
+    /* ОДНА СТРОКА ВМЕСТО ДВУХ: 20px сверху, auto по бокам, 35px снизу */
+    margin: 20px auto 35px auto;
 }

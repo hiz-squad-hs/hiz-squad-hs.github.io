@@ -5,6 +5,7 @@
 @import 'feedback.css';
 @import 'developers.css';
 @import '404.css';
+@import 'projects-card.css';
 /* Изменяет цвет для всего сайта */
 body {
     /* Цвет фона */
