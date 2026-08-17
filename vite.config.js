@@ -29,7 +29,8 @@ export default defineConfig({
         developers: resolve(__dirname, 'pages/developers.html'),
 
         // Твоя страница проекта, которую Rollup обязан скомпилировать
-        proj1: resolve(__dirname, 'pages/projects/card-site.html')
+        //proj1: resolve(__dirname, 'pages/projects/card-site.html')
+
       }
     }
   }

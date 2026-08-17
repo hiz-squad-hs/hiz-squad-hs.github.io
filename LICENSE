@@ -1,22 +1,21 @@
-hizsquad Open & Content Protection License
-Copyright (c) 2026 hizsquad. All rights reserved. 
+MIT License
 
-1. DEFINITIONS AND AFFILIATES
-1.1. "hizsquad" (also referred to as "Licensor", "the Corporation", "We", "Us") shall include the parent brand, its founders, and all official subsidiaries, developer groups, visual novel projects, digital assets, and related creative undertakings.
-1.2. Any content, project, or asset officially published under the "hizsquad" umbrella or marked with "HS" branding is fully covered by the protections of this License.
-2. SOURCE CODE RIGHTS AND FREEDOMS
-2.1. This License governs the use, copying, and modification of the source code of this software (website structure, scripts, styles).
-2.2. Developers and third parties are granted permission, free of charge, to copy, modify, compile, publish, distribute, sublicense, and sell the source code of this website, both in its original and modified forms, without any royalty payments to the original authors.
-3. MANDATORY BRANDING CONDITION (CREDIT BADGE)
-3.1. The primary and non-negotiable condition for using, copying, or modifying this code is the retention of the prominent frontend element — the visual credit badge stating "Создано hizsquad" (or "Developed by hizsquad") in its original, unaltered form in the website footer.
-3.2. Completely removing, hiding via CSS (display: none, visibility: hidden), reducing the font size to an unreadable state, or overlapping the credit badge with third-party elements is strictly PROHIBITED.
-3.3. Any use of the code without retaining the original credit badge immediately invalidates this License and shall be treated as unlawful misappropriation of hizsquad corporation's intellectual property.
-4. DISCLAIMER OF LIABILITY AND REPUTATION PROTECTION
-4.1. THE SOURCE CODE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. The authors (hizsquad corporation) shall not be held liable for the stability, security, or functionality of any web resources created by third parties using this code.
-4.2. REPUTATION PROTECTION: hizsquad corporation has no affiliation, connection, or responsibility for websites using this code if they are hosted on third-party domains (URLs) other than the official company address.
-4.3. If third parties deploy a copy of this code on their own URL and use it to publish prohibited content, scams, phishing, illegal materials, malware, or engage in any activities that damage the reputation of the original brand, all legal, financial, and criminal liability shall rest solely with the owners of that specific third-party domain (URL). hizsquad corporation will not accept any claims regarding third-party resources.
-5. EXCLUSIONS FROM THE OPEN LICENSE (CONTENT, LOGOS, TRADEMARKS)
-5.1. This License applies EXCLUSIVELY to the technical source code (page architecture, scripts).
-5.2. All graphical materials, trademarks, proprietary logos, emblems, unique designs of the "HS" abbreviation, symbols, and elements of the unique "hizsquad" corporate identity are the exclusive and indivisible closed property of the author and copyright holder.
-5.3. Third parties copying the code are STRICTLY PROHIBITED from using original "HS" logos and corporate identity elements on their external resources, except for the original credit badge in the footer. Using the symbols to falsely represent a third-party website as an official hizsquad resource is prohibited.
-5.4. All visual novel characters, their names, story texts, sprites, backgrounds, and specific media content belonging to any project related to hizsquad are closed intellectual property. Copying, transferring them to other games, or commercially distributing them without the express written consent of the owner of hizsquad is strictly prohibited and subject to legal prosecution.
+Copyright (c) 2026 hiz-squad hs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
