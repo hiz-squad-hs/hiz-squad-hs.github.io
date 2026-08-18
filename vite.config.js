@@ -4,7 +4,7 @@ import injectHTML from 'vite-plugin-html-inject'
 
 export default defineConfig({
   // АВТОМАТИКА: если собираем для сайта — ставим имя репа, если запускаем локально — оставляем '/'
-  base: process.env.NODE_ENV === 'production' ? '/hiz-squad-hs.github.io/' : '/',
+  base: '/hiz-squad-hs.github.io/',
 
   plugins: [
     injectHTML({
